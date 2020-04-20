@@ -196,24 +196,21 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+    <link href="stylesheets/screen-74fdae82.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-87ca3514.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-c5541673.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" alt="Navbar" />
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+      <img src="images/logo-ac222bce.svg" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
@@ -223,280 +220,303 @@
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#audience" class="toc-h2 toc-link" data-title="Audience">Audience</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#embed2" class="toc-h1 toc-link" data-title="Embed2">Embed2</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#quick-start" class="toc-h2 toc-link" data-title="Quick Start">Quick Start</a>
+                  </li>
+                  <li>
+                    <a href="#advanced-setup" class="toc-h2 toc-link" data-title="Advanced Setup">Advanced Setup</a>
+                  </li>
+                  <li>
+                    <a href="#api-reference" class="toc-h2 toc-link" data-title="API Reference">API Reference</a>
+                  </li>
+              </ul>
           </li>
       </ul>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Hello, and welcome to the Ada documentation repository! This is our place to store documentation on our publicly accessible APIs, libraries, and utilities.</p>
+<h2 id='audience'>Audience</h2>
+<p>This document is intended for bot specialists and developers with working knowledge of HTML. For some of the advanced setup, basic knowledge of JavaScript is required. The document also assumes you have a hosted web page that you have write access to.</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p><img src="images/telescope-7b51a8eb.png" class="telescope-img" alt="Telescope" /></p>
 
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<script>
+  window.adaSettings = {
+    handle: "ada"
+  }
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "https://static.ada.support/embed2.js"
+  document.head.appendChild(script);
+</script>
+<h1 id='embed2'>Embed2</h1>
+<p>Embed2 is a small JavaScript application that embeds your Ada Chat bot into your web page.</p>
+<h2 id='quick-start'>Quick Start</h2><h3 id='1-turn-on-your-bot'>1. Turn on your bot</h3>
+<p>The first step towards adding your Ada Chat Bot to your web page is to turn on the Web Chat integration in your Settings &gt; Platforms page.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<p><img src="images/turn-on-bot-3137b052.png" alt="Turn on bot" /></p>
+<h3 id='2-embed-script'>2. Embed script</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;head&gt;</span>
+  ...
+  <span class="nt">&lt;script
+    </span><span class="na">id=</span><span class="s">"__ada"</span>
+    <span class="na">data-handle=</span><span class="s">"&lt;YOUR-BOT-HANDLE&gt;"</span>
+    <span class="na">src=</span><span class="s">"https://static.ada.support/embed2.js"</span>
+  <span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
 </code></pre>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>💡 Be sure to replace <code>&lt;YOUR-BOT-HANDLE&gt;</code> with your own bot handle. It&#39;s usually the name of your company.</p>
 </blockquote>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>Once you have your website all ready-to-go, find the page where you&#39;d like to embed the Ada Chat bot. This will be a .html file (or equivalent). Here you will need to paste the following into the <code>&lt;head&gt;</code> tag.</p>
+<h3 id='3-that-39-s-it'>3. That&#39;s it! 🎉</h3>
+<p>You should now see a small question mark button on the bottom right corner of your page. Clicking the button will toggle the Web Chat in and out of view.</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p><a href="https://jsfiddle.net/avj0fdL3/">You can see see a working example here.</a></p>
+<h2 id='advanced-setup'>Advanced Setup</h2>
+<p>In some situations, the quick setup above may be too simplistic. You may want to delay instantiation of Embed2 until a certain event, your application might be a Single-Page App and you need more control, or perhaps you don&#39;t want to bind your settings to the window object. Whatever the reason, Embed2 ships with additional features to help you get setup.</p>
+<h3 id='lazy-mode'>Lazy Mode</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script
+  </span><span class="na">id=</span><span class="s">"__ada"</span>
+  <span class="na">data-lazy</span>
+  <span class="na">data-handle=</span><span class="s">"&lt;YOUR-BOT-HANDLE&gt;"</span>
+  <span class="na">src=</span><span class="s">"https://static.ada.support/embed2.js"</span>
+<span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<blockquote>
+<p>Start Embed2 in your JS when you are ready to:</p>
+</blockquote>
+<pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">start</span><span class="p">({</span>
+  <span class="na">handle</span><span class="p">:</span> <span class="s2">"my-bot"</span><span class="p">,</span>
+  <span class="na">metaFields</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">username</span><span class="p">:</span> <span class="s2">"Ada Lovelace"</span><span class="p">,</span>
+    <span class="na">phone_number</span><span class="p">:</span> <span class="s2">"123-456-7890"</span>
+  <span class="p">},</span>
+  <span class="na">chatterTokenCallback</span><span class="p">:</span> <span class="p">(</span><span class="nx">chatter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">chatter</span><span class="p">)</span>
+<span class="p">});</span>
+</code></pre>
+<p>Lazy mode can be configured to delay Embed2 instantiation. To put Embed2 in lazy mode, add the attribute <code>data-lazy</code> to the Embed2 script.</p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<p>When you are ready to instantiate Embed2, call the <code>start</code> action. You can pass any settings you would normally set in <code>window.adaSettings</code> here.</p>
+<h2 id='api-reference'>API Reference</h2>
+<p>Embed2 supports numerous settings and actions to help you customize the look and behaviour of your bot. Settings are set in the <code>adaSettings</code> object when you embed your script. They determine intrinsic properties like bot style and behaviour. Conversely, actions can be called at any point in time to toggle Chat, update user meta data, and more.</p>
+<h3 id='settings'>Settings</h3>
+<p>Settings are set on the window object as <code>window.adaSettings = { ... }</code>. Alternatively, they can be passed directly do <code>adaEmbed.start({ ... })</code> for advanced configurations. A full list of available settings is provided below:</p>
+<h4 id='adareadycallback'>adaReadyCallback</h4>
+<p><code>adaReadyCallback?(params: { isRolledOut: boolean }): void;</code></p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">adaReadyCallback</span><span class="p">:</span> <span class="p">({</span> <span class="nx">isRolledOut</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Ada Embed is done setting up. Chat support is now available."</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+<p>Specifies a callback function to be called when Embed2 has finished setting up. This is especially useful when Embed2 is loaded asynchronously.</p>
+<h4 id='analyticscallback'>analyticsCallback</h4>
+<p><code>analyticsCallback?(analytics: object): void;</code></p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">analyticsCallback</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// Here is where you can forward this event to Adobe (or elsewhere)</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+<blockquote>
+<p>Example event:</p>
+</blockquote>
+<pre class="highlight javascript"><code><span class="p">{</span>
+  <span class="nl">chatter_id</span><span class="p">:</span> <span class="s2">"5d9f84b2a35763fc71cb7bf"</span><span class="p">,</span>
+  <span class="nx">session_id</span><span class="p">:</span> <span class="s2">"59f84b22c4683df7c38bf69"</span><span class="p">,</span>
+  <span class="nx">answer_name</span><span class="p">:</span> <span class="s2">"Greeting"</span><span class="p">,</span>
+  <span class="nx">event_name</span><span class="p">:</span> <span class="s2">"answer presented"</span><span class="p">,</span>
+  <span class="nx">authenticated</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre>
+<p>Can be used to pass back data analytics. Make sure you have <code>analyticsCallback</code> feature enabled on your bot - you can check this with your account manager.</p>
+<h4 id='chattertokencallback'>chatterTokenCallback</h4>
+<p><code>chatterTokenCallback?(chatter: string): void;</code></p>
+
+<p>Specifies a callback for when the <code>chatter</code> token has been set in Chat.</p>
+<h4 id='cluster'>cluster</h4>
+<p><code>cluster?: string;</code></p>
+
+<p>Specifies the Kubernetes cluster to be used. Unless directed by an Ada team member, you will not need to change this value.</p>
+<h4 id='crosswindowpersistence'>crossWindowPersistence</h4>
+<p><code>crossWindowPersistence?: boolean;</code></p>
+
+<p>When set enables the Chat drawer open / close state to persist across windows and page refreshes using the <code>Window.sessionStorage</code> API. When the browser is closed the state is forgotten.</p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+We recommend enabling this feature if your bot uses Ada Glass.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h4 id='domain'>domain</h4>
+<p><code>domain?: string;</code></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Can be used to change the subdomain. Unless directed by an Ada team member, you will not need to change this value.</p>
+<h4 id='embedstyles'>embedStyles</h4>
+<p><code>embedStyles?: string;</code></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p>The embedStyles option can be used to override default styles inside Embed2 elements. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<aside class="warning">
+Setting custom styles based on Embed2 elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h4 id='eventcallbacks'>eventCallbacks</h4>
+<p><code>eventCallbacks?: { [eventName: string]: (jsEvent: object) =&gt; void };</code></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Used in conjunction with Custom JavaScript Event Blocks to trigger specified callbacks as part of a conversation. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
+<h4 id='greeting'>greeting</h4>
+<p><code>greeting?: string;</code></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p>This can be used to customize the greeting messages that new users see. This is useful for setting page-specific greetings across your app. The greeting should correspond to the ID of the Answer you would like to use. The ID can be found in the URL of the corresponding Answer in the dashboard.</p>
+<h4 id='handle'>handle</h4>
+<p><code>handle:? string;</code></p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
+<p>Can be used to specify the bot handle if one is not specified in the script <code>data-handle</code> attribute.</p>
+<h4 id='hidemask'>hideMask</h4>
+<p><code>hideMask?: boolean;</code></p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>When set to <code>true</code>, this will prevent the default mask from appearing over top of your site&#39;s content when opened on desktop.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
 <aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+We recommend setting the value to `false`. This will allow end-users to navigate the page while the Ada Chat window is open.
 </aside>
+<h4 id='language'>language</h4>
+<p><code>language?: string;</code></p>
 
-<p>The Kittn API uses the following error codes:</p>
+<p>Takes in a language code to programatically set the bot language. Languages must first be turned on in the <em>Settings &gt; Multilingual</em> page of your Ada dashboard. Language codes follow the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 language format</a>.</p>
+<h4 id='metafields'>metaFields</h4>
+<p><code>metaFields?: object;</code></p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">metaFields</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">phone_number</span><span class="p">:</span> <span class="s2">"(123) 456-7890"</span><span class="p">,</span>
+      <span class="na">name</span><span class="p">:</span> <span class="s2">"Ada Lovelace"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+<p>Used to pass meta information about a <code>chatter</code>. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the <code>phone_number</code> and <code>name</code> for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the <em>Chatter Info</em> modal in the <em>Conversations</em> page of your Ada dashboard. Should you need to programatically change these values after bot setup, you can make use of the <code>setMetaFields</code> action below.</p>
 
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
+<aside class="notice">
+Meta field keys should not include whitespace, emojis, special characters or periods.
+</aside>
+<h4 id='lazy'>lazy</h4>
+<p><code>lazy?: boolean;</code></p>
+
+<p>When <code>true</code>, this will prevent the bot from loading until the <code>adaEmbed.start(...)</code> method is called.</p>
+<h4 id='parentelement'>parentElement</h4>
+<p><code>parentElement?: string | HTMLElement;</code></p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;head&gt;</span>
+  <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">parentElement</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"custom-iframe"</span><span class="p">)</span>
+    <span class="p">}</span>
+  <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"custom-iframe"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre>
+<p>Specifies where to mount the <code>&lt;iframe&gt;</code> if the default side drawer is not desired. Accepts the <code>HTMLElement</code> or element <code>id</code> of the desired parent element.</p>
+<h4 id='private'>private</h4>
+<p><code>private?: boolean;</code></p>
+
+<p>If set to <code>true</code>, this will put Web Chat into &quot;Private&quot; mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persistence to &quot;Forget After Reload&quot; in the <em>Settings &gt; Platforms</em> page of your Ada dashboard. More information on persistence can be found <a href="https://adasupporthelp.zendesk.com/hc/en-us/articles/360018115813-Chatter-Persistence-Remembering-Conversations-">here</a>.</p>
+<h4 id='rolloutoverride'>rolloutOverride</h4>
+<p><code>rolloutOverride?: number;</code></p>
+
+<p>Can be used to override the rollout value set in the dashboard. This can be useful if you need page-specific rollout values. Accepts any number between <code>0</code> and <code>1</code>.</p>
+<h4 id='styles'>styles</h4>
+<p><code>styles?: string;</code></p>
+
+<p>The styles option can be used to override default styles inside the Web Chat iFrame. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
+
+<aside class="warning">
+Setting custom styles based on Chat elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
+</aside>
+<h4 id='testmode'>testMode</h4>
+<p><code>testMode?: boolean;</code></p>
+
+<p>Marks the <code>chatter</code> as a test user.</p>
+<h4 id='togglecallback'>toggleCallback</h4>
+<p><code>toggleCallback?(isDrawerOpen: boolean): void;</code></p>
+
+<p>Can be used to trigger side-effects when the Web Chat drawer is opened or closed.</p>
+<h3 id='actions'>Actions</h3>
+<p>Actions can be called from the global adaEmbed object. A list of the available actions is available below.</p>
+<h4 id='createproactive'>createProactive</h4>
+<p><code>createProactive(body: string, duration?: number, responseId?: string): Promise&lt;void&gt;;</code></p>
+<pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">createProactive</span><span class="p">(</span><span class="s2">"Hi there! Is there something I can help you with?"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">"5e9481e296ac6c4467092be5"</span><span class="p">);</span>
+</code></pre>
+<p>Can be used to programatically create a proactive intro message. If an Answer ID is provided, that answer will be triggered when Chat is opened. This action requires the <code>developer_proactive</code> feature flag to be turned on.</p>
+<h4 id='deletehistory'>deleteHistory</h4>
+<p><code>deleteHistory(): Promise&lt;void&gt;;</code></p>
+
+<p>Deletes the <code>chatter</code> used to fetch conversation logs for an end-user from storage. When a user opens a new Chat window a new <code>chatter</code> will be generated.</p>
+<h4 id='getinfo'>getInfo</h4>
+<p><code>getInfo(): Promise&lt;WindowInfo&gt;;</code></p>
+
+<p>Returns an object containing information about the bot, including <code>hasActiveChatter</code>, <code>hasClosedChat</code>, and <code>isChatOpen</code>.</p>
+<h4 id='reset'>reset</h4>
+<p><code>reset(resetParams?: ResetParams): Promise&lt;void&gt;;</code></p>
+<pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">reset</span><span class="p">({</span>
+  <span class="na">greeting</span><span class="p">:</span> <span class="s2">"5e9481e296ac6c4467092be5"</span>
+<span class="p">});</span>
+</code></pre>
+<p>Creates a new <code>chatter</code> and refreshes the Chat window. <code>reset</code> can take an optional object allowing <code>language</code>, <code>metaFields</code>, and <code>greeting</code> to be changed for the new <code>chatter</code>.</p>
+
+<p>To prevent creating a new <code>chatter</code> (and maintain conversation history), <code>resetChatHistory</code> can be passed to the object with a value of <code>false</code>.</p>
+<h4 id='setmetafields'>setMetaFields</h4>
+<p><code>setMetaFields(options: object): Promise&lt;void&gt;;</code></p>
+<pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">setMetaFields</span><span class="p">({</span>
+  <span class="na">phone_number</span><span class="p">:</span> <span class="s2">"(123) 456-7890"</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s2">"Ada Lovelace"</span>
+<span class="p">});</span>
+</code></pre>
+<p>Used to update <code>metaFields</code> after Chat has been opened. In most situations, the <code>metaFields</code> settings object should be enough for user attribution. However, in cases where Ada Chat remains open while page changes occur (like in Single Page Applications), this methods may be useful.</p>
+
+<aside class="notice">
+Meta field keys should not include whitespace, emojis, special characters or periods.
+</aside>
+<h4 id='start'>start</h4>
+<p><code>start(adaSettings: StartOptions): Promise&lt;void&gt;;</code></p>
+<pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">start</span><span class="p">({</span>
+  <span class="na">handle</span><span class="p">:</span> <span class="s2">"my-bot"</span><span class="p">,</span>
+  <span class="na">language</span><span class="p">:</span> <span class="s2">"fr"</span><span class="p">,</span>
+  <span class="na">mobileOverlay</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+</code></pre>
+<p>Used to initialize Embed2 on your page. This action is triggered by default internally, so you will likely not need to call it directly unless you are using Embed2 is <code>lazy</code> mode, or have called <code>stop</code> and want to re-start Embed2.</p>
+<h4 id='stop'>stop</h4>
+<p><code>stop(): Promise&lt;void&gt;;</code></p>
+
+<p>Removes Embed2 from your page.</p>
+<h4 id='toggle'>toggle</h4>
+<p><code>toggle(): Promise&lt;void&gt;;</code></p>
+
+<p>Can be used to programatically open / close the Chat window. This method cannot be used with the <code>parentElement</code> option.</p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
