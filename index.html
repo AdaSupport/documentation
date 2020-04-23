@@ -236,6 +236,9 @@
                     <a href="#advanced-setup" class="toc-h2 toc-link" data-title="Advanced Setup">Advanced Setup</a>
                   </li>
                   <li>
+                    <a href="#upgrading-from-embed1" class="toc-h2 toc-link" data-title="Upgrading From Embed1">Upgrading From Embed1</a>
+                  </li>
+                  <li>
                     <a href="#api-reference" class="toc-h2 toc-link" data-title="API Reference">API Reference</a>
                   </li>
                   <li>
@@ -379,6 +382,41 @@
 <p>If you are using RequireJS as your module loader, you may encounter issues with the standard Embed2 setup. This is because RequireJS does not know how to interpret the <code>id</code> and <code>data-handle</code> attributes Ada uses. Instead of setting this attributes, you can just set <code>handle</code> in your <code>window.adaSettings</code> object.</p>
 
 <p>If you experience additional errors be sure to check out the <a href="https://requirejs.org/docs/errors.html">RequireJS Common Errors documentation</a>.</p>
+<h2 id='upgrading-from-embed1'>Upgrading From Embed1</h2>
+<p>If you are coming to Embed2 from Embed1, great! Upgrading couldn&#39;t be simpler. For basic setups, you most likely just need to upgrade you Embed script <code>src</code> from &quot;https://static.ada.support/embed.js&quot; to &quot;https://static.ada.support/embed2.js&quot;.</p>
+
+<p>Although the Embed2 API is almost identical to Embed1, in some cases features have been removed or modified. You can find a comprehensive list of changes below.</p>
+
+<table><thead>
+<tr>
+<th>Embed1 Feature</th>
+<th>Status</th>
+<th>Comments</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>crossWindowPersistence</code></td>
+<td>Modified</td>
+<td>Simplified to accept a boolean instead of an object.</td>
+</tr>
+<tr>
+<td><code>dragAndDrop</code></td>
+<td>Deprecated</td>
+<td></td>
+</tr>
+<tr>
+<td><code>mobileOverlay</code></td>
+<td>Deprecated</td>
+<td></td>
+</tr>
+<tr>
+<td><code>styles</code></td>
+<td>Same API</td>
+<td>Now requires a feature flag to use.</td>
+</tr>
+</tbody></table>
+
+<p>Additionally, all actions have been modified to return Promises.</p>
 <h2 id='api-reference'>API Reference</h2>
 <p>Embed2 supports numerous settings and actions to help you customize the look and behaviour of your bot. Settings are set in the <code>adaSettings</code> object when you embed your script. They determine intrinsic properties like bot style and behaviour. Conversely, actions can be called at any point in time to toggle Chat, update user meta data, and more.</p>
 <h3 id='settings'>Settings</h3>
@@ -505,10 +543,11 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <span class="nt">&lt;/body&gt;</span>
 </code></pre>
 <p>Specifies where to mount the <code>&lt;iframe&gt;</code> if the default side drawer is not desired. Accepts the <code>HTMLElement</code> or element <code>id</code> of the desired parent element.</p>
-<h4 id='private'>private</h4>
-<p><code>private?: boolean;</code></p>
 
-<p>If set to <code>true</code>, this will put Web Chat into &quot;Private&quot; mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persistence to &quot;Forget After Reload&quot; in the <em>Settings &gt; Platforms</em> page of your Ada dashboard. More information on persistence can be found <a href="https://adasupporthelp.zendesk.com/hc/en-us/articles/360018115813-Chatter-Persistence-Remembering-Conversations-">here</a>.</p>
+<p>// #### private
+// <code>private?: boolean;</code></p>
+
+<p>// If set to <code>true</code>, this will put Web Chat into &quot;Private&quot; mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persistence to &quot;Forget After Reload&quot; in the <em>Settings &gt; Platforms</em> page of your Ada dashboard. More information on persistence can be found <a href="https://adasupporthelp.zendesk.com/hc/en-us/articles/360018115813-Chatter-Persistence-Remembering-Conversations-">here</a>.</p>
 <h4 id='rolloutoverride'>rolloutOverride</h4>
 <p><code>rolloutOverride?: number;</code></p>
 
