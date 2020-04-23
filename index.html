@@ -196,7 +196,7 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen-102de948.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-e66460b0.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-dc442ed7.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-c5541673.js"></script>
   </head>
@@ -238,17 +238,39 @@
                   <li>
                     <a href="#api-reference" class="toc-h2 toc-link" data-title="API Reference">API Reference</a>
                   </li>
+                  <li>
+                    <a href="#faq" class="toc-h2 toc-link" data-title="FAQ">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#versioning" class="toc-h2 toc-link" data-title="Versioning">Versioning</a>
+                  </li>
+                  <li>
+                    <a href="#browser-support" class="toc-h2 toc-link" data-title="Browser Support">Browser Support</a>
+                  </li>
               </ul>
           </li>
+          <li>
+            <a href="#ios-sdk" class="toc-h1 toc-link" data-title="iOS SDK">iOS SDK</a>
+          </li>
+          <li>
+            <a href="#android-sdk" class="toc-h1 toc-link" data-title="Android SDK">Android SDK</a>
+          </li>
+          <li>
+            <a href="#questions" class="toc-h1 toc-link" data-title="Questions">Questions</a>
+          </li>
       </ul>
+        <ul class="toc-footer">
+            <li><a href='https://www.ada.support/'>Learn more about Ada</a></li>
+            <li><a href='https://www.ada.support/demo'>Request a demo</a></li>
+        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Hello, and welcome to the Ada documentation repository! This is our place to store documentation on our publicly accessible APIs, libraries, and utilities.</p>
+<p>Hello, and welcome to the Ada documentation hub! This is our place to store documentation on our publicly accessible APIs, libraries, and utilities.</p>
 <h2 id='audience'>Audience</h2>
-<p>This document is intended for bot specialists and developers with working knowledge of HTML. For some of the advanced setup, basic knowledge of JavaScript is required. The document also assumes you have a hosted web page that you have write access to.</p>
+<p>This document is primarily intended for developers and individuals with some practical programming experience. </p>
 
 <p><img src="images/telescope-7b51a8eb.png" class="telescope-img" alt="Telescope" /></p>
 
@@ -263,7 +285,7 @@
   document.head.appendChild(script);
 </script>
 <h1 id='embed2'>Embed2</h1>
-<p>Embed2 is a small JavaScript application that embeds your Ada Chat bot into your web page.</p>
+<p>Embed2 is a small JavaScript script that embeds your Ada Chat bot into your web page. It comes equipped with various settings and actiongs to tailor the end-user experience.</p>
 <h2 id='quick-start'>Quick Start</h2><h3 id='1-turn-on-your-bot'>1. Turn on your bot</h3>
 <p>The first step towards adding your Ada Chat Bot to your web page is to turn on the Web Chat integration in your Settings &gt; Platforms page.</p>
 
@@ -281,7 +303,7 @@
 <p>Be sure to replace &lt;YOUR-BOT-HANDLE&gt; with your own bot handle. It&#39;s usually the name of your company.</p>
 </blockquote>
 
-<p>Once you have your website all ready-to-go, find the page where you&#39;d like to embed the Ada Chat bot. This will be a .html file (or equivalent). Here you will need to paste the following into the <code>&lt;head&gt;</code> tag.</p>
+<p>Once you have your website all ready-to-go, find the page where you&#39;d like to embed the Ada Chat bot. In most cases this will be an HTML file. Here you will need to paste the following into the <code>&lt;head&gt;</code> tag.</p>
 <h3 id='3-that-39-s-it'>3. That&#39;s it! 🎉</h3>
 <p>You should now see a small question mark button on the bottom right corner of your page. Clicking the button will toggle the Web Chat in and out of view.</p>
 
@@ -310,6 +332,53 @@
 <p>Lazy mode can be configured to delay Embed2 instantiation. To put Embed2 in lazy mode, add the attribute <code>data-lazy</code> to the Embed2 script.</p>
 
 <p>When you are ready to instantiate Embed2, call the <code>start</code> action. You can pass any settings you would normally set in <code>window.adaSettings</code> here.</p>
+<h3 id='async'>Async</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script
+  </span><span class="na">async</span>
+  <span class="na">id=</span><span class="s">"__ada"</span>
+  <span class="na">data-handle=</span><span class="s">"&lt;YOUR-BOT-HANDLE&gt;"</span>
+  <span class="na">src=</span><span class="s">"https://static.ada.support/embed2.js"</span>
+<span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<blockquote>
+<p>Approach 1: Use the native script onload handler</p>
+</blockquote>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script
+  </span><span class="na">async</span>
+  <span class="na">id=</span><span class="s">"__ada"</span>
+  <span class="na">onload=</span><span class="s">"window.adaEmbed.toggle()"</span>
+  <span class="na">data-handle=</span><span class="s">"&lt;YOUR-BOT-HANDLE&gt;"</span>
+  <span class="na">src=</span><span class="s">"https://static.ada.support/embed2.js"</span>
+<span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<blockquote>
+<p>Approach 2: Use the adaReadyCallback</p>
+</blockquote>
+<pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">adaReadyCallback</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">toggle</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+<p>Since HTML5, the <code>async</code> attribute has been available for HTML script elements. From <strong>MDN</strong>, it &quot;allows the elimination of parser-blocking JavaScript where the browser would have to load and evaluate scripts before continuing to parse&quot;. It may be applied to the Embed2 script in order to improve load times of your page, however it does come with certain caveats.</p>
+
+<p>If your bot implementation makes use of any actions from the global <code>adaEmbed</code> object, you must wait for the object to be added to your document. There are two common approaches for handling this situation.</p>
+
+<p><strong>Approach 1</strong> involves using the native script <code>onload</code> handler. When the script has loaded, the <code>load</code> event will be triggered. It is safe to call <code>adaEmbed</code> actions from here.</p>
+
+<p><strong>Approach 2</strong> involves using the <code>adaReadyCallback</code>, which you can set in <code>window.adaSettings</code>. Note that while in the examples provided <code>toggle</code> will work effectively the same way, <code>adaReadyCallback</code> is triggered after <code>adaEmbed.start(...)</code> has executed. Meanwhile, <code>onload</code> is simply triggered when the Embed2 script has been loaded.</p>
+<h3 id='requirejs'>RequireJS</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">handle</span><span class="p">:</span> <span class="s2">"&lt;YOUR-BOT-HANDLE&gt;"</span>
+  <span class="p">};</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;script
+  </span><span class="na">src=</span><span class="s">"https://static.ada.support/embed2.js"</span>
+<span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<p>If you are using RequireJS as your module loader, you may encounter issues with the standard Embed2 setup. This is because RequireJS does not know how to interpret the <code>id</code> and <code>data-handle</code> attributes Ada uses. Instead of setting this attributes, you can just set <code>handle</code> in your <code>window.adaSettings</code> object.</p>
+
+<p>If you experience additional errors be sure to check out the <a href="https://requirejs.org/docs/errors.html">RequireJS Common Errors documentation</a>.</p>
 <h2 id='api-reference'>API Reference</h2>
 <p>Embed2 supports numerous settings and actions to help you customize the look and behaviour of your bot. Settings are set in the <code>adaSettings</code> object when you embed your script. They determine intrinsic properties like bot style and behaviour. Conversely, actions can be called at any point in time to toggle Chat, update user meta data, and more.</p>
 <h3 id='settings'>Settings</h3>
@@ -466,7 +535,9 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 <p><code>createProactive(body: string, duration?: number, responseId?: string): Promise&lt;void&gt;;</code></p>
 <pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">createProactive</span><span class="p">(</span><span class="s2">"Hi there! Is there something I can help you with?"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">"5e9481e296ac6c4467092be5"</span><span class="p">);</span>
 </code></pre>
-<p>Can be used to programatically create a proactive intro message. If an Answer ID is provided, that answer will be triggered when Chat is opened. This action requires the <code>developer_proactive</code> feature flag to be turned on.</p>
+<p>Can be used to programatically create a proactive intro message. If an Answer ID is provided, that answer will be triggered when Chat is opened. <code>createProactive</code> returns a Promise, which can be used to wait for one proactive intro before displaying the next.</p>
+
+<p>This action requires the <code>developer_proactive</code> feature flag to be turned on.</p>
 <h4 id='deletehistory'>deleteHistory</h4>
 <p><code>deleteHistory(): Promise&lt;void&gt;;</code></p>
 
@@ -513,6 +584,28 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <p><code>toggle(): Promise&lt;void&gt;;</code></p>
 
 <p>Can be used to programatically open / close the Chat window. This method cannot be used with the <code>parentElement</code> option.</p>
+<h2 id='faq'>FAQ</h2><h4 id='how-do-i-setup-ada-chat-for-my-mobile-app'>How do I setup Ada Chat for my mobile app?</h4>
+<p>Ada now has native support for both iOS and Android apps! Find out more about iOS <a href="#ios-sdk">here</a>, and Android <a href="#android-sdk">here</a>.</p>
+<h4 id='how-do-i-customize-the-look-and-feel-of-the-ada-chat-button'>How do I customize the look and feel of the Ada Chat button?</h4>
+<p>Ada supports multiple options for button configurtation through the dashboard. Without any code, you can customize attributes such as the button colour, size, and icon.</p>
+
+<p>Further customization can be made through the <code>embedStyles</code> setting above. CSS selectors can be brittle, and your style customizations may need to be updated from time to time. If this functionality is required, the <code>ui_customization</code> feature flag must first be turned on by an Ada ACX team member.</p>
+<h4 id='how-do-i-customize-the-look-and-feel-of-the-chat-window'>How do I customize the look and feel of the Chat window?</h4>
+<p>Basic branding, including colours and icons, can be configured through the Ada dashboard.</p>
+
+<p>Additional customization of the chat window is available through the <code>styles</code> setting, as long as you have the <code>ui_customization</code> feature flag enabled. As with <code>embedStyled</code> we do not recommend using this feature unless crucial.</p>
+<h4 id='ada-embed-is-rendered-as-soon-as-the-page-loads-how-can-i-delay-rendering'>Ada Embed is rendered as soon as the page loads. How can I delay rendering?</h4>
+<p>Embed2 features a useful data attribute called <code>data-lazy</code>. When defined on your script, Embed2 will not be triggered until you manually call <code>adaEmbed.start(...)</code>. Alternatively, the <code>lazy</code> property can be passed to the <code>window.adaSettings</code>. See <a href="#advanced-setup">Advanced Setup</a> for more information.</p>
+<h2 id='versioning'>Versioning</h2>
+<p>The Embed script found above is versionless. This means that the latest stable features will be made available to you without any changes to your code.</p>
+<h2 id='browser-support'>Browser Support</h2>
+<p>Embed supports all major browsers, including Chrome, FireFox, Safari, Edge, IE11+, and mobile browsers.</p>
+<h1 id='ios-sdk'>iOS SDK</h1>
+<p>Documentation coming soon.</p>
+<h1 id='android-sdk'>Android SDK</h1>
+<p>Documentation coming soon.</p>
+<h1 id='questions'>Questions</h1>
+<p>Need some help? Get in touch with us at <a href="mailto:help@ada.support">help@ada.support</a>.</p>
 
       </div>
       <div class="dark-box">
