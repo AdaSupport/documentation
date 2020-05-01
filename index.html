@@ -196,12 +196,12 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen-e66460b0.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-b950c38d.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-dc442ed7.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all-c5541673.js"></script>
+      <script src="javascripts/all-721d054c.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;javascript&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -210,9 +210,6 @@
     </a>
     <div class="toc-wrapper">
       <img src="images/logo-ac222bce.svg" class="logo" alt="Logo" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="javascript">javascript</a>
-        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -222,7 +219,7 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#audience" class="toc-h2 toc-link" data-title="Audience">Audience</a>
+                    <a href="#introduction-audience" class="toc-h2 toc-link" data-title="Audience">Audience</a>
                   </li>
               </ul>
           </li>
@@ -230,30 +227,235 @@
             <a href="#embed2" class="toc-h1 toc-link" data-title="Embed2">Embed2</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#quick-start" class="toc-h2 toc-link" data-title="Quick Start">Quick Start</a>
+                    <a href="#embed2-quick-start" class="toc-h2 toc-link" data-title="Quick Start">Quick Start</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#embed2-quick-start-1-turn-on-your-bot" class="toc-h3 toc-link" data-title="1. Turn on your bot">1. Turn on your bot</a>
+                          </li>
+                          <li>
+                            <a href="#embed2-quick-start-2-embed-script" class="toc-h3 toc-link" data-title="2. Embed script">2. Embed script</a>
+                          </li>
+                          <li>
+                            <a href="#embed2-quick-start-3-that-39-s-it" class="toc-h3 toc-link" data-title="3. That's it! 🎉">3. That's it! 🎉</a>
+                          </li>
+                      </ul>
                   </li>
                   <li>
-                    <a href="#advanced-setup" class="toc-h2 toc-link" data-title="Advanced Setup">Advanced Setup</a>
+                    <a href="#embed2-advanced-setup" class="toc-h2 toc-link" data-title="Advanced Setup">Advanced Setup</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#embed2-advanced-setup-lazy-mode" class="toc-h3 toc-link" data-title="Lazy Mode">Lazy Mode</a>
+                          </li>
+                          <li>
+                            <a href="#embed2-advanced-setup-async" class="toc-h3 toc-link" data-title="Async">Async</a>
+                          </li>
+                          <li>
+                            <a href="#embed2-advanced-setup-requirejs" class="toc-h3 toc-link" data-title="RequireJS">RequireJS</a>
+                          </li>
+                      </ul>
                   </li>
                   <li>
-                    <a href="#upgrading-from-embed1" class="toc-h2 toc-link" data-title="Upgrading From Embed1">Upgrading From Embed1</a>
+                    <a href="#embed2-upgrading-from-embed1" class="toc-h2 toc-link" data-title="Upgrading From Embed1">Upgrading From Embed1</a>
                   </li>
                   <li>
-                    <a href="#api-reference" class="toc-h2 toc-link" data-title="API Reference">API Reference</a>
+                    <a href="#embed2-api-reference" class="toc-h2 toc-link" data-title="API Reference">API Reference</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#embed2-api-reference-settings" class="toc-h3 toc-link" data-title="Settings">Settings</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-adareadycallback" class="toc-h4 toc-link" data-title="adaReadyCallback">adaReadyCallback</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-analyticscallback" class="toc-h4 toc-link" data-title="analyticsCallback">analyticsCallback</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-chattertokencallback" class="toc-h4 toc-link" data-title="chatterTokenCallback">chatterTokenCallback</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-cluster" class="toc-h4 toc-link" data-title="cluster">cluster</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-crosswindowpersistence" class="toc-h4 toc-link" data-title="crossWindowPersistence">crossWindowPersistence</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-domain" class="toc-h4 toc-link" data-title="domain">domain</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-embedstyles" class="toc-h4 toc-link" data-title="embedStyles">embedStyles</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-eventcallbacks" class="toc-h4 toc-link" data-title="eventCallbacks">eventCallbacks</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-greeting" class="toc-h4 toc-link" data-title="greeting">greeting</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-handle" class="toc-h4 toc-link" data-title="handle">handle</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-hidemask" class="toc-h4 toc-link" data-title="hideMask">hideMask</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-language" class="toc-h4 toc-link" data-title="language">language</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-metafields" class="toc-h4 toc-link" data-title="metaFields">metaFields</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-lazy" class="toc-h4 toc-link" data-title="lazy">lazy</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-parentelement" class="toc-h4 toc-link" data-title="parentElement">parentElement</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-privatemode" class="toc-h4 toc-link" data-title="privateMode">privateMode</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-rolloutoverride" class="toc-h4 toc-link" data-title="rolloutOverride">rolloutOverride</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-styles" class="toc-h4 toc-link" data-title="styles">styles</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-testmode" class="toc-h4 toc-link" data-title="testMode">testMode</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-settings-togglecallback" class="toc-h4 toc-link" data-title="toggleCallback">toggleCallback</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#embed2-api-reference-actions" class="toc-h3 toc-link" data-title="Actions">Actions</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#embed2-api-reference-actions-createproactive" class="toc-h4 toc-link" data-title="createProactive">createProactive</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-actions-deletehistory" class="toc-h4 toc-link" data-title="deleteHistory">deleteHistory</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-actions-getinfo" class="toc-h4 toc-link" data-title="getInfo">getInfo</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-actions-reset" class="toc-h4 toc-link" data-title="reset">reset</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-actions-setmetafields" class="toc-h4 toc-link" data-title="setMetaFields">setMetaFields</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-actions-start" class="toc-h4 toc-link" data-title="start">start</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-actions-stop" class="toc-h4 toc-link" data-title="stop">stop</a>
+                                  </li>
+                                  <li>
+                                    <a href="#embed2-api-reference-actions-toggle" class="toc-h4 toc-link" data-title="toggle">toggle</a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
                   </li>
                   <li>
-                    <a href="#faq" class="toc-h2 toc-link" data-title="FAQ">FAQ</a>
+                    <a href="#embed2-faq" class="toc-h2 toc-link" data-title="FAQ">FAQ</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#embed2-faq-actions-how-do-i-setup-ada-chat-for-my-mobile-app" class="toc-h3 toc-link" data-title="How do I setup Ada Chat for my mobile app?">How do I setup Ada Chat for my mobile app?</a>
+                          </li>
+                          <li>
+                            <a href="#embed2-faq-actions-how-do-i-customize-the-look-and-feel-of-the-ada-chat-button" class="toc-h3 toc-link" data-title="How do I customize the look and feel of the Ada Chat button?">How do I customize the look and feel of the Ada Chat button?</a>
+                          </li>
+                          <li>
+                            <a href="#embed2-faq-actions-how-do-i-customize-the-look-and-feel-of-the-chat-window" class="toc-h3 toc-link" data-title="How do I customize the look and feel of the Chat window?">How do I customize the look and feel of the Chat window?</a>
+                          </li>
+                          <li>
+                            <a href="#embed2-faq-actions-ada-embed-is-rendered-as-soon-as-the-page-loads-how-can-i-delay-rendering" class="toc-h3 toc-link" data-title="Ada Embed is rendered as soon as the page loads. How can I delay rendering?">Ada Embed is rendered as soon as the page loads. How can I delay rendering?</a>
+                          </li>
+                      </ul>
                   </li>
                   <li>
-                    <a href="#versioning" class="toc-h2 toc-link" data-title="Versioning">Versioning</a>
+                    <a href="#embed2-versioning" class="toc-h2 toc-link" data-title="Versioning">Versioning</a>
                   </li>
                   <li>
-                    <a href="#browser-support" class="toc-h2 toc-link" data-title="Browser Support">Browser Support</a>
+                    <a href="#embed2-browser-support" class="toc-h2 toc-link" data-title="Browser Support">Browser Support</a>
                   </li>
               </ul>
           </li>
           <li>
             <a href="#ios-sdk" class="toc-h1 toc-link" data-title="iOS SDK">iOS SDK</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#ios-sdk-installation" class="toc-h2 toc-link" data-title="Installation">Installation</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#ios-sdk-installation-option-1-manual-integration" class="toc-h3 toc-link" data-title="Option 1: Manual Integration">Option 1: Manual Integration</a>
+                          </li>
+                          <li>
+                            <a href="#ios-sdk-installation-option-2-cocoapods" class="toc-h3 toc-link" data-title="Option 2: CocoaPods">Option 2: CocoaPods</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#ios-sdk-quick-start" class="toc-h2 toc-link" data-title="Quick Start">Quick Start</a>
+                  </li>
+                  <li>
+                    <a href="#ios-sdk-api" class="toc-h2 toc-link" data-title="API">API</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#ios-sdk-api-settings" class="toc-h3 toc-link" data-title="Settings">Settings</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#ios-sdk-api-settings-appscheme" class="toc-h4 toc-link" data-title="appScheme">appScheme</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-settings-cluster" class="toc-h4 toc-link" data-title="cluster">cluster</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-settings-greeting" class="toc-h4 toc-link" data-title="greeting">greeting</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-settings-handle" class="toc-h4 toc-link" data-title="handle">handle</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-settings-language" class="toc-h4 toc-link" data-title="language">language</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-settings-metafields" class="toc-h4 toc-link" data-title="metaFields">metaFields</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-settings-openweblinksinsafari" class="toc-h4 toc-link" data-title="openWebLinksInSafari">openWebLinksInSafari</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-settings-styles" class="toc-h4 toc-link" data-title="styles">styles</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#ios-sdk-api-methods" class="toc-h3 toc-link" data-title="Methods">Methods</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#ios-sdk-api-methods-launchmodalwebsupport" class="toc-h4 toc-link" data-title="launchModalWebSupport">launchModalWebSupport</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-methods-launchnavwebsupport" class="toc-h4 toc-link" data-title="launchNavWebSupport">launchNavWebSupport</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-methods-launchinjectingwebsupport" class="toc-h4 toc-link" data-title="launchInjectingWebSupport">launchInjectingWebSupport</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-methods-setmetafields" class="toc-h4 toc-link" data-title="setMetaFields">setMetaFields</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-methods-reset" class="toc-h4 toc-link" data-title="reset">reset</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-methods-deletehistory" class="toc-h4 toc-link" data-title="deleteHistory">deleteHistory</a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#android-sdk" class="toc-h1 toc-link" data-title="Android SDK">Android SDK</a>
@@ -272,7 +474,7 @@
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
 <p>Hello, and welcome to the Ada documentation hub! This is our place to store documentation on our publicly accessible APIs, libraries, and utilities.</p>
-<h2 id='audience'>Audience</h2>
+<h2 id='introduction-audience'>Audience</h2>
 <p>This document is primarily intended for developers and individuals with some practical programming experience. </p>
 
 <p><img src="images/telescope-7b51a8eb.png" class="telescope-img" alt="Telescope" /></p>
@@ -289,11 +491,11 @@
 </script>
 <h1 id='embed2'>Embed2</h1>
 <p>Embed2 is a small JavaScript script that embeds your Ada Chat bot into your web page. It comes equipped with various settings and actiongs to tailor the end-user experience.</p>
-<h2 id='quick-start'>Quick Start</h2><h3 id='1-turn-on-your-bot'>1. Turn on your bot</h3>
+<h2 id='embed2-quick-start'>Quick Start</h2><h3 id='embed2-quick-start-1-turn-on-your-bot'>1. Turn on your bot</h3>
 <p>The first step towards adding your Ada Chat Bot to your web page is to turn on the Web Chat integration in your Settings &gt; Platforms page.</p>
 
 <p><img src="images/turn-on-bot-3137b052.png" alt="Turn on bot" /></p>
-<h3 id='2-embed-script'>2. Embed script</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;head&gt;</span>
+<h3 id='embed2-quick-start-2-embed-script'>2. Embed script</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;head&gt;</span>
   ...
   <span class="nt">&lt;script
     </span><span class="na">id=</span><span class="s">"__ada"</span>
@@ -307,13 +509,13 @@
 </blockquote>
 
 <p>Once you have your website all ready-to-go, find the page where you&#39;d like to embed the Ada Chat bot. In most cases this will be an HTML file. Here you will need to paste the following into the <code>&lt;head&gt;</code> tag.</p>
-<h3 id='3-that-39-s-it'>3. That&#39;s it! 🎉</h3>
+<h3 id='embed2-quick-start-3-that-39-s-it'>3. That&#39;s it! 🎉</h3>
 <p>You should now see a small question mark button on the bottom right corner of your page. Clicking the button will toggle the Web Chat in and out of view.</p>
 
-<p><a href="https://jsfiddle.net/avj0fdL3/">You can see see a working example here.</a></p>
-<h2 id='advanced-setup'>Advanced Setup</h2>
+<p><a href="https://jsfiddle.net/1cdnye94/">You can see see a working example here.</a></p>
+<h2 id='embed2-advanced-setup'>Advanced Setup</h2>
 <p>In some situations, the quick setup above may be too simplistic. You may want to delay instantiation of Embed2 until a certain event, your application might be a Single-Page App and you need more control, or perhaps you don&#39;t want to bind your settings to the window object. Whatever the reason, Embed2 ships with additional features to help you get setup.</p>
-<h3 id='lazy-mode'>Lazy Mode</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script
+<h3 id='embed2-advanced-setup-lazy-mode'>Lazy Mode</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script
   </span><span class="na">id=</span><span class="s">"__ada"</span>
   <span class="na">data-lazy</span>
   <span class="na">data-handle=</span><span class="s">"&lt;YOUR-BOT-HANDLE&gt;"</span>
@@ -335,7 +537,7 @@
 <p>Lazy mode can be configured to delay Embed2 instantiation. To put Embed2 in lazy mode, add the attribute <code>data-lazy</code> to the Embed2 script.</p>
 
 <p>When you are ready to instantiate Embed2, call the <code>start</code> action. You can pass any settings you would normally set in <code>window.adaSettings</code> here.</p>
-<h3 id='async'>Async</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script
+<h3 id='embed2-advanced-setup-async'>Async</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script
   </span><span class="na">async</span>
   <span class="na">id=</span><span class="s">"__ada"</span>
   <span class="na">data-handle=</span><span class="s">"&lt;YOUR-BOT-HANDLE&gt;"</span>
@@ -368,8 +570,8 @@
 
 <p><strong>Approach 1</strong> involves using the native script <code>onload</code> handler. When the script has loaded, the <code>load</code> event will be triggered. It is safe to call <code>adaEmbed</code> actions from here.</p>
 
-<p><strong>Approach 2</strong> involves using the <code>adaReadyCallback</code>, which you can set in <code>window.adaSettings</code>. Note that while in the examples provided <code>toggle</code> will work effectively the same way, <code>adaReadyCallback</code> is triggered after <code>adaEmbed.start(...)</code> has executed. Meanwhile, <code>onload</code> is simply triggered when the Embed2 script has been loaded.</p>
-<h3 id='requirejs'>RequireJS</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
+<p><strong>Approach 2</strong> involves using the <a href="#embed2-api-reference-settings-adareadycallback">adaReadyCallback</a>, which you can set in <code>window.adaSettings</code>. Note that while in the examples provided <code>toggle</code> will work effectively the same way, <code>adaReadyCallback</code> is triggered after <code>adaEmbed.start(...)</code> has executed. Meanwhile, <code>onload</code> is simply triggered when the Embed2 script has been loaded.</p>
+<h3 id='embed2-advanced-setup-requirejs'>RequireJS</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">handle</span><span class="p">:</span> <span class="s2">"&lt;YOUR-BOT-HANDLE&gt;"</span>
   <span class="p">};</span>
@@ -382,7 +584,7 @@
 <p>If you are using RequireJS as your module loader, you may encounter issues with the standard Embed2 setup. This is because RequireJS does not know how to interpret the <code>id</code> and <code>data-handle</code> attributes Ada uses. Instead of setting this attributes, you can just set <code>handle</code> in your <code>window.adaSettings</code> object.</p>
 
 <p>If you experience additional errors be sure to check out the <a href="https://requirejs.org/docs/errors.html">RequireJS Common Errors documentation</a>.</p>
-<h2 id='upgrading-from-embed1'>Upgrading From Embed1</h2>
+<h2 id='embed2-upgrading-from-embed1'>Upgrading From Embed1</h2>
 <p>If you are coming to Embed2 from Embed1, great! Upgrading couldn&#39;t be simpler. For basic setups, you most likely just need to upgrade you Embed script <code>src</code> from &quot;https://static.ada.support/embed.js&quot; to &quot;https://static.ada.support/embed2.js&quot;.</p>
 
 <p>Although the Embed2 API is almost identical to Embed1, in some cases features have been removed or modified. You can find a comprehensive list of changes below.</p>
@@ -410,6 +612,11 @@
 <td></td>
 </tr>
 <tr>
+<td><code>private</code></td>
+<td>Modified</td>
+<td>Renamed to <code>privateMode</code>.</td>
+</tr>
+<tr>
 <td><code>styles</code></td>
 <td>Same API</td>
 <td>Now requires a feature flag to use.</td>
@@ -417,13 +624,11 @@
 </tbody></table>
 
 <p>Additionally, all actions have been modified to return Promises.</p>
-<h2 id='api-reference'>API Reference</h2>
+<h2 id='embed2-api-reference'>API Reference</h2>
 <p>Embed2 supports numerous settings and actions to help you customize the look and behaviour of your bot. Settings are set in the <code>adaSettings</code> object when you embed your script. They determine intrinsic properties like bot style and behaviour. Conversely, actions can be called at any point in time to toggle Chat, update user meta data, and more.</p>
-<h3 id='settings'>Settings</h3>
+<h3 id='embed2-api-reference-settings'>Settings</h3>
 <p>Settings are set on the window object as <code>window.adaSettings = { ... }</code>. Alternatively, they can be passed directly do <code>adaEmbed.start({ ... })</code> for advanced configurations. A full list of available settings is provided below:</p>
-<h4 id='adareadycallback'>adaReadyCallback</h4>
-<p><code>adaReadyCallback?(params: { isRolledOut: boolean }): void;</code></p>
-<pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+<h4 id='embed2-api-reference-settings-adareadycallback'>adaReadyCallback</h4><pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">adaReadyCallback</span><span class="p">:</span> <span class="p">({</span> <span class="nx">isRolledOut</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Ada Embed is done setting up. Chat support is now available."</span><span class="p">);</span>
@@ -431,10 +636,10 @@
   <span class="p">}</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre>
+<p><code>adaReadyCallback?(params: { isRolledOut: boolean }): void;</code></p>
+
 <p>Specifies a callback function to be called when Embed2 has finished setting up. This is especially useful when Embed2 is loaded asynchronously.</p>
-<h4 id='analyticscallback'>analyticsCallback</h4>
-<p><code>analyticsCallback?(analytics: object): void;</code></p>
-<pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+<h4 id='embed2-api-reference-settings-analyticscallback'>analyticsCallback</h4><pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">analyticsCallback</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="c1">// Here is where you can forward this event to Adobe (or elsewhere)</span>
@@ -454,16 +659,18 @@
   <span class="nx">authenticated</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </code></pre>
-<p>Can be used to pass back data analytics. Make sure you have <code>analyticsCallback</code> feature enabled on your bot - you can check this with your account manager.</p>
-<h4 id='chattertokencallback'>chatterTokenCallback</h4>
+<p><code>analyticsCallback?(analytics: object): void;</code></p>
+
+<p>Can be used to pass back data analytics. Make sure you have the <code>analyticsCallback</code> feature enabled on your bot.</p>
+<h4 id='embed2-api-reference-settings-chattertokencallback'>chatterTokenCallback</h4>
 <p><code>chatterTokenCallback?(chatter: string): void;</code></p>
 
 <p>Specifies a callback for when the <code>chatter</code> token has been set in Chat.</p>
-<h4 id='cluster'>cluster</h4>
+<h4 id='embed2-api-reference-settings-cluster'>cluster</h4>
 <p><code>cluster?: string;</code></p>
 
 <p>Specifies the Kubernetes cluster to be used. Unless directed by an Ada team member, you will not need to change this value.</p>
-<h4 id='crosswindowpersistence'>crossWindowPersistence</h4>
+<h4 id='embed2-api-reference-settings-crosswindowpersistence'>crossWindowPersistence</h4>
 <p><code>crossWindowPersistence?: boolean;</code></p>
 
 <p>When set enables the Chat drawer open / close state to persist across windows and page refreshes using the <code>Window.sessionStorage</code> API. When the browser is closed the state is forgotten.</p>
@@ -471,11 +678,11 @@
 <aside class="notice">
 We recommend enabling this feature if your bot uses Ada Glass.
 </aside>
-<h4 id='domain'>domain</h4>
+<h4 id='embed2-api-reference-settings-domain'>domain</h4>
 <p><code>domain?: string;</code></p>
 
 <p>Can be used to change the subdomain. Unless directed by an Ada team member, you will not need to change this value.</p>
-<h4 id='embedstyles'>embedStyles</h4>
+<h4 id='embed2-api-reference-settings-embedstyles'>embedStyles</h4>
 <p><code>embedStyles?: string;</code></p>
 
 <p>The embedStyles option can be used to override default styles inside Embed2 elements. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
@@ -483,19 +690,19 @@ We recommend enabling this feature if your bot uses Ada Glass.
 <aside class="warning">
 Setting custom styles based on Embed2 elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
 </aside>
-<h4 id='eventcallbacks'>eventCallbacks</h4>
+<h4 id='embed2-api-reference-settings-eventcallbacks'>eventCallbacks</h4>
 <p><code>eventCallbacks?: { [eventName: string]: (jsEvent: object) =&gt; void };</code></p>
 
 <p>Used in conjunction with Custom JavaScript Event Blocks to trigger specified callbacks as part of a conversation. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
-<h4 id='greeting'>greeting</h4>
+<h4 id='embed2-api-reference-settings-greeting'>greeting</h4>
 <p><code>greeting?: string;</code></p>
 
 <p>This can be used to customize the greeting messages that new users see. This is useful for setting page-specific greetings across your app. The greeting should correspond to the ID of the Answer you would like to use. The ID can be found in the URL of the corresponding Answer in the dashboard.</p>
-<h4 id='handle'>handle</h4>
+<h4 id='embed2-api-reference-settings-handle'>handle</h4>
 <p><code>handle:? string;</code></p>
 
 <p>Can be used to specify the bot handle if one is not specified in the script <code>data-handle</code> attribute.</p>
-<h4 id='hidemask'>hideMask</h4>
+<h4 id='embed2-api-reference-settings-hidemask'>hideMask</h4>
 <p><code>hideMask?: boolean;</code></p>
 
 <p>When set to <code>true</code>, this will prevent the default mask from appearing over top of your site&#39;s content when opened on desktop.</p>
@@ -503,13 +710,11 @@ Setting custom styles based on Embed2 elements is inherently brittle, and can ca
 <aside class="notice">
 We recommend setting the value to `false`. This will allow end-users to navigate the page while the Ada Chat window is open.
 </aside>
-<h4 id='language'>language</h4>
+<h4 id='embed2-api-reference-settings-language'>language</h4>
 <p><code>language?: string;</code></p>
 
 <p>Takes in a language code to programatically set the bot language. Languages must first be turned on in the <em>Settings &gt; Multilingual</em> page of your Ada dashboard. Language codes follow the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 language format</a>.</p>
-<h4 id='metafields'>metaFields</h4>
-<p><code>metaFields?: object;</code></p>
-<pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+<h4 id='embed2-api-reference-settings-metafields'>metaFields</h4><pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">metaFields</span><span class="p">:</span> <span class="p">{</span>
       <span class="na">phone_number</span><span class="p">:</span> <span class="s2">"(123) 456-7890"</span><span class="p">,</span>
@@ -518,18 +723,18 @@ We recommend setting the value to `false`. This will allow end-users to navigate
   <span class="p">}</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre>
+<p><code>metaFields?: object;</code></p>
+
 <p>Used to pass meta information about a <code>chatter</code>. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the <code>phone_number</code> and <code>name</code> for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the <em>Chatter Info</em> modal in the <em>Conversations</em> page of your Ada dashboard. Should you need to programatically change these values after bot setup, you can make use of the <code>setMetaFields</code> action below.</p>
 
 <aside class="notice">
 Meta field keys should not include whitespace, emojis, special characters or periods.
 </aside>
-<h4 id='lazy'>lazy</h4>
+<h4 id='embed2-api-reference-settings-lazy'>lazy</h4>
 <p><code>lazy?: boolean;</code></p>
 
 <p>When <code>true</code>, this will prevent the bot from loading until the <code>adaEmbed.start(...)</code> method is called.</p>
-<h4 id='parentelement'>parentElement</h4>
-<p><code>parentElement?: string | HTMLElement;</code></p>
-<pre class="highlight html tab-html"><code><span class="nt">&lt;head&gt;</span>
+<h4 id='embed2-api-reference-settings-parentelement'>parentElement</h4><pre class="highlight html tab-html"><code><span class="nt">&lt;head&gt;</span>
   <span class="c">&lt;!-- ... --&gt;</span>
   <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
     <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
@@ -542,17 +747,18 @@ Meta field keys should not include whitespace, emojis, special characters or per
   <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"custom-iframe"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 </code></pre>
+<p><code>parentElement?: string | HTMLElement;</code></p>
+
 <p>Specifies where to mount the <code>&lt;iframe&gt;</code> if the default side drawer is not desired. Accepts the <code>HTMLElement</code> or element <code>id</code> of the desired parent element.</p>
+<h4 id='embed2-api-reference-settings-privatemode'>privateMode</h4>
+<p><code>privateMode?: boolean;</code></p>
 
-<p>// #### private
-// <code>private?: boolean;</code></p>
-
-<p>// If set to <code>true</code>, this will put Web Chat into &quot;Private&quot; mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persistence to &quot;Forget After Reload&quot; in the <em>Settings &gt; Platforms</em> page of your Ada dashboard. More information on persistence can be found <a href="https://adasupporthelp.zendesk.com/hc/en-us/articles/360018115813-Chatter-Persistence-Remembering-Conversations-">here</a>.</p>
-<h4 id='rolloutoverride'>rolloutOverride</h4>
+<p>If set to <code>true</code>, this will put Web Chat into &quot;Private&quot; mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persistence to &quot;Forget After Reload&quot; in the <em>Settings &gt; Platforms</em> page of your Ada dashboard. More information on persistence can be found <a href="https://adasupporthelp.zendesk.com/hc/en-us/articles/360018115813-Chatter-Persistence-Remembering-Conversations-">here</a>.</p>
+<h4 id='embed2-api-reference-settings-rolloutoverride'>rolloutOverride</h4>
 <p><code>rolloutOverride?: number;</code></p>
 
 <p>Can be used to override the rollout value set in the dashboard. This can be useful if you need page-specific rollout values. Accepts any number between <code>0</code> and <code>1</code>.</p>
-<h4 id='styles'>styles</h4>
+<h4 id='embed2-api-reference-settings-styles'>styles</h4>
 <p><code>styles?: string;</code></p>
 
 <p>The styles option can be used to override default styles inside the Web Chat iFrame. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
@@ -560,87 +766,199 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <aside class="warning">
 Setting custom styles based on Chat elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
 </aside>
-<h4 id='testmode'>testMode</h4>
+<h4 id='embed2-api-reference-settings-testmode'>testMode</h4>
 <p><code>testMode?: boolean;</code></p>
 
 <p>Marks the <code>chatter</code> as a test user.</p>
-<h4 id='togglecallback'>toggleCallback</h4>
+<h4 id='embed2-api-reference-settings-togglecallback'>toggleCallback</h4>
 <p><code>toggleCallback?(isDrawerOpen: boolean): void;</code></p>
 
 <p>Can be used to trigger side-effects when the Web Chat drawer is opened or closed.</p>
-<h3 id='actions'>Actions</h3>
+<h3 id='embed2-api-reference-actions'>Actions</h3>
 <p>Actions can be called from the global adaEmbed object. A list of the available actions is available below.</p>
-<h4 id='createproactive'>createProactive</h4>
-<p><code>createProactive(body: string, duration?: number, responseId?: string): Promise&lt;void&gt;;</code></p>
-<pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">createProactive</span><span class="p">(</span><span class="s2">"Hi there! Is there something I can help you with?"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">"5e9481e296ac6c4467092be5"</span><span class="p">);</span>
+<h4 id='embed2-api-reference-actions-createproactive'>createProactive</h4><pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">createProactive</span><span class="p">(</span><span class="s2">"Hi there! Is there something I can help you with?"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">"5e9481e296ac6c4467092be5"</span><span class="p">);</span>
 </code></pre>
+<p><code>createProactive(body: string, duration?: number, responseId?: string): Promise&lt;void&gt;;</code></p>
+
 <p>Can be used to programatically create a proactive intro message. If an Answer ID is provided, that answer will be triggered when Chat is opened. <code>createProactive</code> returns a Promise, which can be used to wait for one proactive intro before displaying the next.</p>
 
 <p>This action requires the <code>developer_proactive</code> feature flag to be turned on.</p>
-<h4 id='deletehistory'>deleteHistory</h4>
+<h4 id='embed2-api-reference-actions-deletehistory'>deleteHistory</h4>
 <p><code>deleteHistory(): Promise&lt;void&gt;;</code></p>
 
 <p>Deletes the <code>chatter</code> used to fetch conversation logs for an end-user from storage. When a user opens a new Chat window a new <code>chatter</code> will be generated.</p>
-<h4 id='getinfo'>getInfo</h4>
+<h4 id='embed2-api-reference-actions-getinfo'>getInfo</h4>
 <p><code>getInfo(): Promise&lt;WindowInfo&gt;;</code></p>
 
 <p>Returns an object containing information about the bot, including <code>hasActiveChatter</code>, <code>hasClosedChat</code>, and <code>isChatOpen</code>.</p>
-<h4 id='reset'>reset</h4>
-<p><code>reset(resetParams?: ResetParams): Promise&lt;void&gt;;</code></p>
-<pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">reset</span><span class="p">({</span>
+<h4 id='embed2-api-reference-actions-reset'>reset</h4><pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">reset</span><span class="p">({</span>
   <span class="na">greeting</span><span class="p">:</span> <span class="s2">"5e9481e296ac6c4467092be5"</span>
 <span class="p">});</span>
 </code></pre>
+<p><code>reset(resetParams?: ResetParams): Promise&lt;void&gt;;</code></p>
+
 <p>Creates a new <code>chatter</code> and refreshes the Chat window. <code>reset</code> can take an optional object allowing <code>language</code>, <code>metaFields</code>, and <code>greeting</code> to be changed for the new <code>chatter</code>.</p>
 
 <p>To prevent creating a new <code>chatter</code> (and maintain conversation history), <code>resetChatHistory</code> can be passed to the object with a value of <code>false</code>.</p>
-<h4 id='setmetafields'>setMetaFields</h4>
-<p><code>setMetaFields(options: object): Promise&lt;void&gt;;</code></p>
-<pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">setMetaFields</span><span class="p">({</span>
+<h4 id='embed2-api-reference-actions-setmetafields'>setMetaFields</h4><pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">setMetaFields</span><span class="p">({</span>
   <span class="na">phone_number</span><span class="p">:</span> <span class="s2">"(123) 456-7890"</span><span class="p">,</span>
   <span class="na">name</span><span class="p">:</span> <span class="s2">"Ada Lovelace"</span>
 <span class="p">});</span>
 </code></pre>
+<p><code>setMetaFields(options: object): Promise&lt;void&gt;;</code></p>
+
 <p>Used to update <code>metaFields</code> after Chat has been opened. In most situations, the <code>metaFields</code> settings object should be enough for user attribution. However, in cases where Ada Chat remains open while page changes occur (like in Single Page Applications), this methods may be useful.</p>
 
 <aside class="notice">
 Meta field keys should not include whitespace, emojis, special characters or periods.
 </aside>
-<h4 id='start'>start</h4>
-<p><code>start(adaSettings: StartOptions): Promise&lt;void&gt;;</code></p>
-<pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">start</span><span class="p">({</span>
+<h4 id='embed2-api-reference-actions-start'>start</h4><pre class="highlight javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">adaEmbed</span><span class="p">.</span><span class="nx">start</span><span class="p">({</span>
   <span class="na">handle</span><span class="p">:</span> <span class="s2">"my-bot"</span><span class="p">,</span>
   <span class="na">language</span><span class="p">:</span> <span class="s2">"fr"</span><span class="p">,</span>
   <span class="na">mobileOverlay</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">});</span>
 </code></pre>
+<p><code>start(adaSettings: StartOptions): Promise&lt;void&gt;;</code></p>
+
 <p>Used to initialize Embed2 on your page. This action is triggered by default internally, so you will likely not need to call it directly unless you are using Embed2 is <code>lazy</code> mode, or have called <code>stop</code> and want to re-start Embed2.</p>
-<h4 id='stop'>stop</h4>
+<h4 id='embed2-api-reference-actions-stop'>stop</h4>
 <p><code>stop(): Promise&lt;void&gt;;</code></p>
 
 <p>Removes Embed2 from your page.</p>
-<h4 id='toggle'>toggle</h4>
+<h4 id='embed2-api-reference-actions-toggle'>toggle</h4>
 <p><code>toggle(): Promise&lt;void&gt;;</code></p>
 
 <p>Can be used to programatically open / close the Chat window. This method cannot be used with the <code>parentElement</code> option.</p>
-<h2 id='faq'>FAQ</h2><h4 id='how-do-i-setup-ada-chat-for-my-mobile-app'>How do I setup Ada Chat for my mobile app?</h4>
+<h2 id='embed2-faq'>FAQ</h2><h4 id='embed2-faq-actions-how-do-i-setup-ada-chat-for-my-mobile-app'>How do I setup Ada Chat for my mobile app?</h4>
 <p>Ada now has native support for both iOS and Android apps! Find out more about iOS <a href="#ios-sdk">here</a>, and Android <a href="#android-sdk">here</a>.</p>
-<h4 id='how-do-i-customize-the-look-and-feel-of-the-ada-chat-button'>How do I customize the look and feel of the Ada Chat button?</h4>
+<h4 id='embed2-faq-actions-how-do-i-customize-the-look-and-feel-of-the-ada-chat-button'>How do I customize the look and feel of the Ada Chat button?</h4>
 <p>Ada supports multiple options for button configurtation through the dashboard. Without any code, you can customize attributes such as the button colour, size, and icon.</p>
 
 <p>Further customization can be made through the <code>embedStyles</code> setting above. CSS selectors can be brittle, and your style customizations may need to be updated from time to time. If this functionality is required, the <code>ui_customization</code> feature flag must first be turned on by an Ada ACX team member.</p>
-<h4 id='how-do-i-customize-the-look-and-feel-of-the-chat-window'>How do I customize the look and feel of the Chat window?</h4>
+<h4 id='embed2-faq-actions-how-do-i-customize-the-look-and-feel-of-the-chat-window'>How do I customize the look and feel of the Chat window?</h4>
 <p>Basic branding, including colours and icons, can be configured through the Ada dashboard.</p>
 
 <p>Additional customization of the chat window is available through the <code>styles</code> setting, as long as you have the <code>ui_customization</code> feature flag enabled. As with <code>embedStyled</code> we do not recommend using this feature unless crucial.</p>
-<h4 id='ada-embed-is-rendered-as-soon-as-the-page-loads-how-can-i-delay-rendering'>Ada Embed is rendered as soon as the page loads. How can I delay rendering?</h4>
-<p>Embed2 features a useful data attribute called <code>data-lazy</code>. When defined on your script, Embed2 will not be triggered until you manually call <code>adaEmbed.start(...)</code>. Alternatively, the <code>lazy</code> property can be passed to the <code>window.adaSettings</code>. See <a href="#advanced-setup">Advanced Setup</a> for more information.</p>
-<h2 id='versioning'>Versioning</h2>
+<h4 id='embed2-faq-actions-ada-embed-is-rendered-as-soon-as-the-page-loads-how-can-i-delay-rendering'>Ada Embed is rendered as soon as the page loads. How can I delay rendering?</h4>
+<p>Embed2 features a useful data attribute called <code>data-lazy</code>. When defined on your script, Embed2 will not be triggered until you manually call <code>adaEmbed.start(...)</code>. Alternatively, the <code>lazy</code> property can be passed to the <code>window.adaSettings</code>. See <a href="#embed2-advanced-setup">Advanced Setup</a> for more information.</p>
+<h2 id='embed2-versioning'>Versioning</h2>
 <p>The Embed script found above is versionless. This means that the latest stable features will be made available to you without any changes to your code.</p>
-<h2 id='browser-support'>Browser Support</h2>
+<h2 id='embed2-browser-support'>Browser Support</h2>
 <p>Embed supports all major browsers, including Chrome, FireFox, Safari, Edge, IE11+, and mobile browsers.</p>
 <h1 id='ios-sdk'>iOS SDK</h1>
-<p>Documentation coming soon.</p>
+<p>The Ada iOS SDK is a small framework that is used to embed your Ada Chat bot into your native iOS application.</p>
+<h2 id='ios-sdk-installation'>Installation</h2>
+<p>The Ada iOS SDK can be installed manually or using CocoaPods. The SDK supports iOS 10.x and up.</p>
+<h3 id='ios-sdk-installation-option-1-manual-integration'>Option 1: Manual Integration</h3>
+<ol>
+<li>Download the <code>AdaEmbedFramework.framework.zip</code> file from the latest release <a href="https://github.com/AdaSupport/ios-sdk/releases">here</a>.</li>
+<li>Right click on the project file in XCode, then click &quot;Add Files to <em>MyProjectName</em>&quot;. Ensure that the <em>Copy groups</em> option is selected.</li>
+<li>Ensure your Deployment Target is set to 10.0, which is the minimum iOS version that the Ada iOS SDK is compatible with.</li>
+<li>In the project settings under General, link the <code>AdaEmbedFramework.framework</code> under the Embedded Binaries section. You can do this by dragging the framework from the left side list in the Embedded Binaries list.</li>
+</ol>
+<h3 id='ios-sdk-installation-option-2-cocoapods'>Option 2: CocoaPods</h3><pre class="highlight swift tab-swift"><code><span class="cp"># Podfile</span>
+<span class="nv">platform</span> <span class="p">:</span><span class="n">ios</span><span class="p">,</span> <span class="err">'</span><span class="mf">10.0</span><span class="err">'</span>
+
+<span class="n">target</span> <span class="err">'</span><span class="kt">MyApp</span><span class="err">'</span> <span class="k">do</span>
+  <span class="n">use_frameworks</span><span class="o">!</span>
+
+  <span class="cp"># Pods for MyApp</span>
+  <span class="n">pod</span> <span class="s">"AdaEmbedFramework"</span><span class="p">,</span> <span class="s">"~&gt;1.0.0"</span>
+
+<span class="n">end</span>
+</code></pre>
+<p>The AdaEmbedFramework CocoaPod is public, however use of the Chat interface is gated. To gain access please reach out to an Ada Account Manager.</p>
+
+<ol>
+<li><p>Add the <code>AdaEmbedFramework</code> to your Podfile.</p></li>
+<li><p>Install the pod using: </p></li>
+</ol>
+
+<p><code>pod install</code></p>
+<h2 id='ios-sdk-quick-start'>Quick Start</h2><pre class="highlight swift tab-swift"><code><span class="kd">import</span> <span class="kt">AdaEmbedFramework</span>
+
+<span class="cp"># ...</span>
+
+<span class="k">var</span> <span class="nv">adaFramework</span> <span class="o">=</span> <span class="kt">AdaWebHost</span><span class="p">(</span><span class="nv">handle</span><span class="p">:</span> <span class="s">"ada-example"</span><span class="p">)</span>
+</code></pre>
+<p>Once you have installed the Ada iOS SDK, you are ready to use it in your app! To start, import <code>AdaEmbedFramework</code> into your controller. Then, create an instance of the <code>AdaWebHost</code>.</p>
+
+<blockquote>
+<p>Please note &quot;ada-example&quot; is being used for demonstration purposes. Be sure to sure modify &quot;handle&quot;, as well as any other values as needed for your bot.</p>
+</blockquote>
+
+<p>Finally, launch Ada using any of the 3 opening methods: <a href="#ios-sdk-api-methods-launchmodalwebsupport">launchModalWebSupport</a>, <a href="#ios-sdk-api-methods-launchnavwebsupport">launchNavWebSupport</a>, or <a href="#ios-sdk-api-methods-launchinjectingwebsupport">launchInjectingWebSupport</a>.</p>
+<h2 id='ios-sdk-api'>API</h2><h3 id='ios-sdk-api-settings'>Settings</h3>
+<p><code>AdaWebHost</code> can take various input parameters to customize the behaviour of your Chat bot.</p>
+<h4 id='ios-sdk-api-settings-appscheme'>appScheme</h4>
+<p><code>appScheme: String = &quot;&quot;</code></p>
+
+<p>Can be used to pass the scheme name of the host app. This allows for more robust handling of universal links.</p>
+<h4 id='ios-sdk-api-settings-cluster'>cluster</h4>
+<p><code>cluster: String = &quot;&quot;</code></p>
+
+<p>Specifies the Kubernetes cluster to be used. Unless directed by an Ada team member, you will not need to change this value.</p>
+<h4 id='ios-sdk-api-settings-greeting'>greeting</h4>
+<p><code>greeting: String = &quot;&quot;</code></p>
+
+<p>This can be used to customize the greeting messages that new users see. This is useful for setting view-specific greetings across your app. The greeting should correspond to the ID of the Answer you would like to use. The ID can be found in the URL of the corresponding Answer in the dashboard.</p>
+<h4 id='ios-sdk-api-settings-handle'>handle</h4>
+<p><code>handle: String</code></p>
+
+<p>The handle for your bot. This is a required field.</p>
+<h4 id='ios-sdk-api-settings-language'>language</h4>
+<p><code>language: String = &quot;&quot;</code></p>
+
+<p>Takes in a language code to programatically set the bot language. Languages must first be turned on in the Settings &gt; Multilingual page of your Ada dashboard. Language codes follow the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 language format</a>.</p>
+<h4 id='ios-sdk-api-settings-metafields'>metaFields</h4><pre class="highlight swift tab-swift"><code><span class="k">var</span> <span class="nv">adaFramework</span> <span class="o">=</span> <span class="kt">AdaWebHost</span><span class="p">(</span><span class="nv">handle</span><span class="p">:</span> <span class="s">"ada-example"</span><span class="p">,</span> <span class="nv">metafields</span><span class="p">:</span> <span class="p">[</span><span class="s">"tier"</span><span class="p">:</span> <span class="s">"pro"</span><span class="p">])</span>
+</code></pre>
+<p><code>metafields: [String: String]? = [:]</code></p>
+
+<p>Used to pass meta information about a Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the phone_number and name for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations page of your Ada dashboard. Should you need to programatically change these values after bot setup, you can make use of the <a href="#setmetafields_-fields-string-any">setMetaFields</a> method below.</p>
+<h4 id='ios-sdk-api-settings-openweblinksinsafari'>openWebLinksInSafari</h4>
+<p><code>openWebLinksInSafari: Bool = false</code></p>
+
+<p>External web links now open by default in-app via the SFSafariViewController. To open external links in the Safari browser, pass <code>openWebLinksInSafari: true</code> to <code>AdaWebHost</code>.</p>
+<h4 id='ios-sdk-api-settings-styles'>styles</h4>
+<p><code>styles: String = &quot;&quot;</code></p>
+
+<p>The styles option can be used to override default styles inside of Web Chat. The value of the string should be the CSS rule-set you wish to apply inside the Web Chat iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
+
+<aside class="warning">
+Setting custom styles based on Chat elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
+</aside>
+<h3 id='ios-sdk-api-methods'>Methods</h3><h4 id='ios-sdk-api-methods-launchmodalwebsupport'>launchModalWebSupport</h4><pre class="highlight swift tab-swift"><code><span class="n">adaFramework</span><span class="o">.</span><span class="nf">launchModalWebSupport</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+</code></pre>
+<p><code>launchModalWebSupport(from viewController: UIViewController)</code></p>
+
+<p>Launches Ada Chat in a modal view overtop your current view.</p>
+<h4 id='ios-sdk-api-methods-launchnavwebsupport'>launchNavWebSupport</h4><pre class="highlight swift tab-swift"><code><span class="n">adaFramework</span><span class="o">.</span><span class="nf">launchNavWebSupport</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">navigationController</span><span class="p">)</span>
+</code></pre>
+<p><code>launchNavWebSupport(from navController: UINavigationController)</code></p>
+
+<p>Pushes a view containing Ada Chat to the top of your navigational stack.</p>
+<h4 id='ios-sdk-api-methods-launchinjectingwebsupport'>launchInjectingWebSupport</h4><pre class="highlight swift tab-swift"><code><span class="n">adaFramework</span><span class="o">.</span><span class="nf">launchInjectingWebSupport</span><span class="p">(</span><span class="nv">into</span><span class="p">:</span> <span class="n">injectingView</span><span class="p">)</span>
+</code></pre>
+<p><code>launchInjectingWebSupport(into view: UIView)</code></p>
+
+<p>Launches Ada Chat into a specified subview.</p>
+<h4 id='ios-sdk-api-methods-setmetafields'>setMetaFields</h4><pre class="highlight swift tab-swift"><code><span class="n">adaFramework</span><span class="o">.</span><span class="nf">setMetaFields</span><span class="p">([</span>
+    <span class="s">"firstName"</span><span class="p">:</span> <span class="s">"Jane"</span><span class="p">,</span>
+    <span class="s">"lastName"</span><span class="p">:</span> <span class="s">"Doe"</span><span class="p">,</span>
+    <span class="s">"tier"</span><span class="p">:</span> <span class="s">"pro"</span>
+<span class="p">])</span>
+</code></pre>
+<p><code>setMetaFields(_ fields: [String: Any])</code></p>
+
+<p>Used to set meta data for a chatter after instantiation. This is useful if you need to update user data after Ada Chat has already launched.</p>
+<h4 id='ios-sdk-api-methods-reset'>reset</h4>
+<p><code>reset()</code></p>
+
+<p>Can be used to create a new <code>chatter</code> and refresh the Chat window. </p>
+<h4 id='ios-sdk-api-methods-deletehistory'>deleteHistory</h4>
+<p><code>deleteHistory()</code></p>
+
+<p>Deletes the <code>chatter</code> used to fetch conversation logs for an end-user from storage. When a user opens a new Chat window a new <code>chatter</code> will be generated.</p>
 <h1 id='android-sdk'>Android SDK</h1>
 <p>Documentation coming soon.</p>
 <h1 id='questions'>Questions</h1>
@@ -648,9 +966,6 @@ Meta field keys should not include whitespace, emojis, special characters or per
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="javascript">javascript</a>
-          </div>
       </div>
     </div>
   </body>
