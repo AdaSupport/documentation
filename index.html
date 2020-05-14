@@ -196,7 +196,7 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen-b950c38d.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-8032b505.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-dc442ed7.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-721d054c.js"></script>
   </head>
@@ -459,6 +459,84 @@
           </li>
           <li>
             <a href="#android-sdk" class="toc-h1 toc-link" data-title="Android SDK">Android SDK</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#android-sdk-installation" class="toc-h2 toc-link" data-title="Installation">Installation</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#android-sdk-installation-manual" class="toc-h3 toc-link" data-title="Manual">Manual</a>
+                          </li>
+                          <li>
+                            <a href="#android-sdk-installation-gradle" class="toc-h3 toc-link" data-title="Gradle">Gradle</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#android-sdk-quick-start" class="toc-h2 toc-link" data-title="Quick Start">Quick Start</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#android-sdk-quick-start-gradle-xml" class="toc-h3 toc-link" data-title="XML">XML</a>
+                          </li>
+                          <li>
+                            <a href="#android-sdk-quick-start-gradle-programmatically" class="toc-h3 toc-link" data-title="Programmatically">Programmatically</a>
+                          </li>
+                          <li>
+                            <a href="#android-sdk-quick-start-gradle-dialog" class="toc-h3 toc-link" data-title="Dialog">Dialog</a>
+                          </li>
+                          <li>
+                            <a href="#android-sdk-quick-start-gradle-activity" class="toc-h3 toc-link" data-title="Activity">Activity</a>
+                          </li>
+                          <li>
+                            <a href="#android-sdk-quick-start-gradle-send-files" class="toc-h3 toc-link" data-title="Send Files">Send Files</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#android-sdk-api" class="toc-h2 toc-link" data-title="API">API</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#android-sdk-api-settings" class="toc-h3 toc-link" data-title="Settings">Settings</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#android-sdk-api-settings-cluster" class="toc-h4 toc-link" data-title="cluster">cluster</a>
+                                  </li>
+                                  <li>
+                                    <a href="#android-sdk-api-settings-greeting" class="toc-h4 toc-link" data-title="greeting">greeting</a>
+                                  </li>
+                                  <li>
+                                    <a href="#android-sdk-api-settings-handle" class="toc-h4 toc-link" data-title="handle">handle</a>
+                                  </li>
+                                  <li>
+                                    <a href="#android-sdk-api-settings-language" class="toc-h4 toc-link" data-title="language">language</a>
+                                  </li>
+                                  <li>
+                                    <a href="#android-sdk-api-settings-metafields" class="toc-h4 toc-link" data-title="metaFields">metaFields</a>
+                                  </li>
+                                  <li>
+                                    <a href="#android-sdk-api-settings-styles" class="toc-h4 toc-link" data-title="styles">styles</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#android-sdk-api-actions" class="toc-h3 toc-link" data-title="Actions">Actions</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#android-sdk-api-actions-deletehistory" class="toc-h4 toc-link" data-title="deleteHistory">deleteHistory</a>
+                                  </li>
+                                  <li>
+                                    <a href="#android-sdk-api-actions-reset" class="toc-h4 toc-link" data-title="reset">reset</a>
+                                  </li>
+                                  <li>
+                                    <a href="#android-sdk-api-actions-setmetafields" class="toc-h4 toc-link" data-title="setMetaFields">setMetaFields</a>
+                                  </li>
+                                  <li>
+                                    <a href="#android-sdk-api-actions-adaembedactivity-amp-adaembeddialog" class="toc-h4 toc-link" data-title="AdaEmbedActivity &amp; AdaEmbedDialog">AdaEmbedActivity &amp; AdaEmbedDialog</a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#questions" class="toc-h1 toc-link" data-title="Questions">Questions</a>
@@ -960,7 +1038,199 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 
 <p>Deletes the <code>chatter</code> used to fetch conversation logs for an end-user from storage. When a user opens a new Chat window a new <code>chatter</code> will be generated.</p>
 <h1 id='android-sdk'>Android SDK</h1>
-<p>Documentation coming soon.</p>
+<p>The Ada Android SDK is a small framework that is used to embed your Ada Chat bot into your native Android application.</p>
+<h2 id='android-sdk-installation'>Installation</h2>
+<p>The Ada Android SDK can be installed manually or using Gradle.</p>
+<h3 id='android-sdk-installation-manual'>Manual</h3>
+<p>The Ada Android SDK can be installed manually from the <code>.aar</code> file. To get a download link please reach out to an Ada Bot Specialist.</p>
+<pre class="highlight groovy tab-groovy"><code><span class="c1">// build.gradle</span>
+<span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">implementation</span> <span class="nf">fileTree</span><span class="o">(</span><span class="nl">dir:</span> <span class="s1">'libs'</span><span class="o">,</span> <span class="nl">include:</span> <span class="o">[</span><span class="s1">'*.jar'</span><span class="o">,</span> <span class="s1">'*.aar'</span><span class="o">])</span>
+<span class="o">}</span>
+</code></pre>
+<p>To install the library you need to save the <code>.aar</code> file under your app module <code>libs</code> folder, for example <code>MyAwesomeProject/app/libs</code>, and include <code>*.aar</code> in application level <code>build.gradle</code> file.</p>
+
+<p>After that, synchronize the project.</p>
+
+<p>You can also import a file using Android Studio. To do this, go to <code>File -&gt; New -&gt; New Module</code>. In the window select <code>Import .JAR/.AAR Package</code> and click <code>Next</code>. After that, specify the path to the <code>.aar</code> file and the module name, and click <code>Finish</code>. </p>
+<pre class="highlight groovy tab-groovy"><code><span class="c1">// build.gradle</span>
+<span class="n">implementation</span> <span class="nf">project</span><span class="o">(</span><span class="s1">':new_module_name'</span><span class="o">)</span>
+</code></pre>
+<p>Finally, define the implementation for the new local library module.</p>
+<h3 id='android-sdk-installation-gradle'>Gradle</h3><pre class="highlight groovy tab-groovy"><code><span class="c1">// build.gradle</span>
+<span class="n">allprojects</span> <span class="o">{</span>
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="n">maven</span> <span class="o">{</span>
+            <span class="n">url</span> <span class="s2">"https://adasupport.bintray.com/Android-SDK"</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>        
+</code></pre>
+<p>The Ada Android SDK can be installed using Gradle from the Ada Support Bintray repository.</p>
+
+<p>To integrate the SDK, first add the following code to the project level <code>build.gradle</code> file.</p>
+
+<blockquote>
+<p>If your project has artifacts within the AndroidX namespace, use:</p>
+</blockquote>
+<pre class="highlight groovy tab-groovy"><code><span class="n">implementation</span> <span class="s1">'support.ada.embed:android-sdk-appcompat:1.1.2'</span>
+</code></pre>
+<blockquote>
+<p>If your project uses Android Support Library, use:</p>
+</blockquote>
+<pre class="highlight groovy tab-groovy"><code><span class="n">implementation</span> <span class="s1">'support.ada.embed:android-sdk-appcompat-legacy:1.1.2'</span>
+</code></pre>
+<p>Next, add the dependency to the application level <code>build.gradle</code>.</p>
+<h2 id='android-sdk-quick-start'>Quick Start</h2>
+<p>After installing the SDK, you can start Ada chat in several ways.</p>
+<h4 id='android-sdk-quick-start-gradle-xml'>XML</h4><pre class="highlight xml tab-xml"><code><span class="c">&lt;!-- XML --&gt;</span>
+<span class="nt">&lt;support.ada.embed.widget.AdaEmbedView</span>
+        <span class="na">android:id=</span><span class="s">"@+id/ada_chat_frame"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+        <span class="na">app:ada_handle=</span><span class="s">"ada-example"</span> <span class="nt">/&gt;</span>
+</code></pre>
+<blockquote>
+<p>Please note &quot;ada-example&quot; is being used for demonstration purposes. Be sure to modify the handle, as well as any other values as needed for your bot.</p>
+</blockquote>
+
+<p>The simplest way to start Ada Chat is via XML.</p>
+
+<p>To display the view, the <code>ada_handle</code> parameter is required. If you specify it as an attribute, the chat will be displayed immediately upon attachment to the parent view. If it is not specified, then you can do it later programmatically using the method <code>initialize(settings: AdaEmbedView.Settings)</code>.</p>
+<pre class="highlight kotlin tab-kotlin"><code><span class="c1">// Delayed initialization
+</span><span class="kd">val</span> <span class="py">adaView</span> <span class="p">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">ada_chat_frame</span><span class="p">)</span>
+
+<span class="n">adaSettings</span> <span class="p">=</span> <span class="n">AdaEmbedView</span><span class="p">.</span><span class="n">Settings</span><span class="p">.</span><span class="n">Builder</span><span class="p">(</span><span class="s">"ada-example"</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">build</span><span class="p">()</span>
+<span class="n">adaView</span><span class="p">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">adaSettings</span><span class="p">)</span>
+</code></pre><h4 id='android-sdk-quick-start-gradle-programmatically'>Programmatically</h4><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">adaView</span> <span class="p">=</span> <span class="n">AdaEmbedView</span><span class="p">(</span><span class="n">getContext</span><span class="p">())</span>
+
+<span class="kd">val</span> <span class="py">adaSettings</span> <span class="p">=</span> <span class="n">AdaEmbedView</span><span class="p">.</span><span class="n">Settings</span><span class="p">.</span><span class="n">Builder</span><span class="p">(</span><span class="s">"ada-example"</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">build</span><span class="p">()</span>
+<span class="n">adaView</span><span class="p">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">adaSettings</span><span class="p">)</span>
+</code></pre>
+<p>To programmatically create the chat frame, you need to create a view object and pass context to the constructor.</p>
+
+<p>After this, the view will be created, but will not be initialized. To do this call <code>initialize(settings: AdaEmbedView.Settings)</code>, passing the settings object as an argument.</p>
+
+<p>Finally, to display the newly created chat frame on screen, simply add the view to your container.</p>
+<h4 id='android-sdk-quick-start-gradle-dialog'>Dialog</h4><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">dialog</span> <span class="p">=</span> <span class="n">AdaEmbedDialog</span><span class="p">()</span>
+ <span class="n">adaDialog</span><span class="p">.</span><span class="n">arguments</span> <span class="p">=</span> <span class="n">Bundle</span><span class="p">().</span><span class="n">apply</span> <span class="p">{</span> 
+    <span class="n">putParcelable</span><span class="p">(</span><span class="n">AdaEmbedDialog</span><span class="p">.</span><span class="n">ARGUMENT_SETTINGS</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span> 
+ <span class="p">}</span>
+</code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="n">dialog</span><span class="p">.</span><span class="n">show</span><span class="p">(</span><span class="n">supportFragmentManager</span><span class="p">,</span> <span class="n">AdaEmbedDialog</span><span class="p">.</span><span class="n">TAG</span><span class="p">)</span>
+</code></pre>
+<blockquote>
+<p>Note that TAG is a simple class name, you can use any value you want.</p>
+</blockquote>
+
+<p>To display a separate chat window on top of the current window, you can use <code>AdaEmbedDialog</code>.</p>
+
+<p>First, create a dialog object and pass the settings to its arguments using a constant <code>AdaEmbedDialog.ARGUMENT_SETTINGS</code>.</p>
+
+<p>Then show it using the native Android <code>show</code> method.</p>
+<h4 id='android-sdk-quick-start-gradle-activity'>Activity</h4><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">intent</span> <span class="p">=</span> <span class="n">Intent</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">AdaEmbedActivity</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)</span>
+<span class="n">intent</span><span class="p">.</span><span class="n">putExtra</span><span class="p">(</span><span class="n">AdaEmbedActivity</span><span class="p">.</span><span class="n">EXTRA_SETTINGS</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+<span class="n">context</span><span class="p">.</span><span class="n">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">)</span>
+</code></pre>
+<blockquote>
+<p>Note that you can use &quot;AdaEmbedActivity&quot; as a regular Android activity. For example, flags and actions can be added.</p>
+</blockquote>
+
+<p>The SDK allows you to open the chat window in a separate window attached to the app navigation. For this you need to use <code>AdaEmbedActivity</code>.</p>
+
+<p>Create an <code>Intent</code> and put the settings in it with the key <code>AdaEmbedActiviti.EXTRA_SETTINGS</code> and run the activity.</p>
+<h4 id='android-sdk-quick-start-gradle-send-files'>Send Files</h4><pre class="highlight kotlin tab-kotlin"><code><span class="n">adaView</span><span class="p">.</span><span class="n">filePickerCallback</span> <span class="p">=</span> <span class="p">{</span> <span class="n">filePickerCallback</span> <span class="p">-&gt;</span>
+    <span class="n">filePickerCallback</span><span class="p">.</span><span class="n">onFileTaken</span><span class="p">(</span><span class="n">someUri</span><span class="p">)</span>
+    <span class="k">true</span>
+<span class="p">}</span>
+</code></pre>
+<p>When using Ada Glass (for Zendesk live agent support), end users sometimes need to upload files. <code>AdaEmbedActivity</code> and <code>AdaEmbedDialog</code> already have this functionality, but if you work directly with <code>AdaEmbedView</code> you have to handle it yourself.</p>
+
+<p>To do this, you need to setup a callback to <code>AdaEmbedView</code>. This callback will be fired when a user requests to attach a file. When you get the URI you can invoke <code>filePickerCallback.onFileTaken(someUri)</code>; it will signal to <code>AdaEmbedView</code> that the file is ready to attach. It&#39;s also possible to pass <code>null</code>, which will cancel the request.</p>
+
+<p>This operation doesn&#39;t require you to pass the file URI to callback immediately. You can save <code>filePickerCallback</code> and invoke the callback later (eg. take URI via file picker).</p>
+
+<p>To notify <code>AdaEmbedView</code> that you are going to handle file attach you should return <code>true</code>.</p>
+<h2 id='android-sdk-api'>API</h2><h3 id='android-sdk-api-settings'>Settings</h3><pre class="highlight xml tab-xml"><code><span class="c">&lt;!-- Example 1: XML --&gt;</span>
+<span class="nt">&lt;support.ada.embed.widget.AdaEmbedView</span>
+        <span class="na">android:id=</span><span class="s">"@+id/ada_chat_frame"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+        <span class="na">app:ada_handle=</span><span class="s">"ada-example"</span> 
+        <span class="na">app:ada_cluster=</span><span class="s">"ca"</span>
+        <span class="na">app:ada_language=</span><span class="s">"en"</span>
+        <span class="na">app:ada_handle=</span><span class="s">"ada-example"</span>
+        <span class="na">app:ada_greetings=</span><span class="s">"5c59aaabd8269e0339979014"</span><span class="nt">/&gt;</span>
+</code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="c1">// Example 2: Kotlin
+</span><span class="kd">val</span> <span class="py">adaSettings</span> <span class="p">=</span> <span class="n">AdaEmbedView</span><span class="p">.</span><span class="n">Settings</span><span class="p">.</span><span class="n">Builder</span><span class="p">(</span><span class="s">"ada-example"</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">cluster</span><span class="p">(</span><span class="s">"ca"</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">greetings</span><span class="p">(</span><span class="s">"5c59aaabd8269e0339979014"</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">language</span><span class="p">(</span><span class="s">"en"</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">metaFields</span><span class="p">(</span><span class="n">metaFieldsMap</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">build</span><span class="p">()</span>
+</code></pre>
+<p>Using the SDK, you can configure the initial chat settings for greater customization. Settings can be configured for XML, or programmatically using the<code>AdaEmbedView.Settings</code> class.</p>
+<h4 id='android-sdk-api-settings-cluster'>cluster</h4>
+<p>Specifies the Kubernetes cluster to be used. Unless directed by an Ada team member, you will not need to change this value.</p>
+<h4 id='android-sdk-api-settings-greeting'>greeting</h4>
+<p>This can be used to customize the greeting messages that new users see. This is useful for setting view-specific greetings across your app. The greeting should correspond to the ID of the Answer you would like to use. The ID can be found in the URL of the corresponding Answer in the dashboard.</p>
+<h4 id='android-sdk-api-settings-handle'>handle</h4>
+<p>The handle for your bot. This is a required field.</p>
+<h4 id='android-sdk-api-settings-language'>language</h4>
+<p>Takes in a language code to programmatically set the bot language. Languages must first be turned on in the Settings &gt; Multilingual page of your Ada dashboard. Language codes follow the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 language format</a>.</p>
+<h4 id='android-sdk-api-settings-metafields'>metaFields</h4>
+<p>Used to pass meta information about a Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the phone_number and name for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations page of your Ada dashboard. </p>
+
+<p>You can also set &quot;meta fields&quot; using XML. For this, you need to create a JSON file in the res/raw directory, and set the reference to the view declaration:</p>
+<h4 id='android-sdk-api-settings-styles'>styles</h4>
+<p>The <code>styles</code> option can be used to override default styles inside of Web Chat. The value of the string should be the CSS rule-set you wish to apply inside the Web Chat iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
+
+<aside class="warning">
+Setting custom styles based on Chat elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
+</aside>
+<h3 id='android-sdk-api-actions'>Actions</h3><h4 id='android-sdk-api-actions-deletehistory'>deleteHistory</h4><pre class="highlight kotlin tab-kotlin"><code><span class="n">adaView</span><span class="p">.</span><span class="n">deleteHistory</span><span class="p">()</span>
+</code></pre>
+<p>Deletes the chatter used to fetch conversation logs for an end-user from storage. When a user opens a new Chat window, a new chatter will be generated.</p>
+
+<p>To do this you need to call <code>deleteHistory()</code> in your <code>AdaEmbedView</code> instance.</p>
+<h4 id='android-sdk-api-actions-reset'>reset</h4>
+<p>Creates a new chatter and refreshes the Chat window. Reset can take an optional params: <code>language</code>, <code>metaFields</code>, and <code>greeting</code> to be changed for the new chatter.</p>
+
+<p>To prevent creating a new chatter (and maintain conversation history), param <code>resetChatHistory</code> can be passed with a value of <code>false</code>.</p>
+
+<p>To do this you need to call <code>reset()</code> in your <code>AdaEmbedView</code> instance:
+<code>kotlin
+adaView.reset()
+</code>
+Or with optional params:</p>
+<pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">metaFields</span> <span class="p">=</span> <span class="n">hashMapOf</span><span class="p">(</span><span class="s">"name"</span> <span class="n">to</span> <span class="s">"John"</span><span class="p">,</span> <span class="s">"age"</span> <span class="n">to</span> <span class="s">"20"</span><span class="p">)</span>
+<span class="n">adaView</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="n">language</span> <span class="p">=</span> <span class="s">"fr"</span><span class="p">,</span> <span class="n">metaFields</span> <span class="p">=</span> <span class="n">metaFields</span><span class="p">)</span>
+</code></pre><h4 id='android-sdk-api-actions-setmetafields'>setMetaFields</h4><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">metaFields</span> <span class="p">=</span> <span class="n">hashMapOf</span><span class="p">(</span><span class="s">"name"</span> <span class="n">to</span> <span class="s">"John"</span><span class="p">,</span> <span class="s">"age"</span> <span class="n">to</span> <span class="s">"20"</span><span class="p">)</span>
+<span class="n">adaView</span><span class="p">.</span><span class="n">setMetaFields</span><span class="p">(</span><span class="n">metaFields</span><span class="p">)</span>
+</code></pre>
+<p>The SDK allows you to change your meta fields while the chat frame is displayed.</p>
+
+<p>To do this you need to call <code>setMetaFields()</code> in your <code>AdaEmbedView</code> instance and pass your new meta fields as an argument:</p>
+<h4 id='android-sdk-api-actions-adaembedactivity-amp-adaembeddialog'>AdaEmbedActivity &amp; AdaEmbedDialog</h4><pre class="highlight kotlin tab-kotlin"><code><span class="c1">// AdaEmbedActivity
+</span><span class="kd">class</span> <span class="nc">MyCustomActivity</span> <span class="p">:</span> <span class="n">AdaEmbedActivity</span><span class="p">(){</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onResume</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="n">onResume</span><span class="p">()</span>
+        <span class="kd">val</span> <span class="py">adaView</span> <span class="p">=</span> <span class="n">getAdaView</span><span class="p">()</span>
+        <span class="n">adaView</span><span class="p">.</span><span class="n">setMetaFields</span><span class="p">(</span><span class="n">metaFields</span><span class="p">)</span>
+        <span class="n">adaView</span><span class="p">.</span><span class="n">deleteHistory</span><span class="p">()</span>
+        <span class="n">adaView</span><span class="p">.</span><span class="n">reset</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>To call actions in the <code>AdaEmbedActivity</code>, you first need to create your own activity that inherits <code>AdaEmbedActivity</code>. Then using the <code>getAdaView()</code> you can obtain the <code>AdaEmbedView</code> instance:</p>
+<pre class="highlight kotlin tab-kotlin"><code><span class="c1">// AdaEmbedDialog
+</span><span class="kd">val</span> <span class="py">adaDialog</span> <span class="p">=</span> <span class="n">supportFragmentManager</span><span class="p">.</span><span class="n">findFragmentByTag</span><span class="p">(</span><span class="n">AdaEmbedDialog</span><span class="p">.</span><span class="n">TAG</span><span class="p">)</span> <span class="k">as</span> <span class="n">AdaEmbedDialog</span>
+<span class="n">adaDialog</span><span class="p">.</span><span class="n">setMetaFields</span><span class="p">(</span><span class="n">metaFields</span><span class="p">)</span>
+<span class="n">adaDialog</span><span class="p">.</span><span class="n">deleteHistory</span><span class="p">()</span>
+<span class="n">adaDialog</span><span class="p">.</span><span class="n">reset</span><span class="p">()</span>
+</code></pre>
+<p>To call actions in the <code>AdaEmbedDialog</code>, you can obtain <code>AdaEmbedDialog</code> instance from FragmentManager:</p>
 <h1 id='questions'>Questions</h1>
 <p>Need some help? Get in touch with us at <a href="mailto:help@ada.support">help@ada.support</a>.</p>
 
