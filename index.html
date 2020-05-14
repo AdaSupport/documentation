@@ -434,22 +434,22 @@
                             <a href="#ios-sdk-api-methods" class="toc-h3 toc-link" data-title="Methods">Methods</a>
                               <ul class="toc-list-h4">
                                   <li>
+                                    <a href="#ios-sdk-api-methods-deletehistory" class="toc-h4 toc-link" data-title="deleteHistory">deleteHistory</a>
+                                  </li>
+                                  <li>
+                                    <a href="#ios-sdk-api-methods-launchinjectingwebsupport" class="toc-h4 toc-link" data-title="launchInjectingWebSupport">launchInjectingWebSupport</a>
+                                  </li>
+                                  <li>
                                     <a href="#ios-sdk-api-methods-launchmodalwebsupport" class="toc-h4 toc-link" data-title="launchModalWebSupport">launchModalWebSupport</a>
                                   </li>
                                   <li>
                                     <a href="#ios-sdk-api-methods-launchnavwebsupport" class="toc-h4 toc-link" data-title="launchNavWebSupport">launchNavWebSupport</a>
                                   </li>
                                   <li>
-                                    <a href="#ios-sdk-api-methods-launchinjectingwebsupport" class="toc-h4 toc-link" data-title="launchInjectingWebSupport">launchInjectingWebSupport</a>
-                                  </li>
-                                  <li>
-                                    <a href="#ios-sdk-api-methods-setmetafields" class="toc-h4 toc-link" data-title="setMetaFields">setMetaFields</a>
-                                  </li>
-                                  <li>
                                     <a href="#ios-sdk-api-methods-reset" class="toc-h4 toc-link" data-title="reset">reset</a>
                                   </li>
                                   <li>
-                                    <a href="#ios-sdk-api-methods-deletehistory" class="toc-h4 toc-link" data-title="deleteHistory">deleteHistory</a>
+                                    <a href="#ios-sdk-api-methods-setmetafields" class="toc-h4 toc-link" data-title="setMetaFields">setMetaFields</a>
                                   </li>
                               </ul>
                           </li>
@@ -1005,7 +1005,16 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <aside class="warning">
 Setting custom styles based on Chat elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
 </aside>
-<h3 id='ios-sdk-api-methods'>Methods</h3><h4 id='ios-sdk-api-methods-launchmodalwebsupport'>launchModalWebSupport</h4><pre class="highlight swift tab-swift"><code><span class="n">adaFramework</span><span class="o">.</span><span class="nf">launchModalWebSupport</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+<h3 id='ios-sdk-api-methods'>Methods</h3><h4 id='ios-sdk-api-methods-deletehistory'>deleteHistory</h4>
+<p><code>deleteHistory()</code></p>
+
+<p>Deletes the <code>chatter</code> used to fetch conversation logs for an end-user from storage. When a user opens a new Chat window a new <code>chatter</code> will be generated.</p>
+<h4 id='ios-sdk-api-methods-launchinjectingwebsupport'>launchInjectingWebSupport</h4><pre class="highlight swift tab-swift"><code><span class="n">adaFramework</span><span class="o">.</span><span class="nf">launchInjectingWebSupport</span><span class="p">(</span><span class="nv">into</span><span class="p">:</span> <span class="n">injectingView</span><span class="p">)</span>
+</code></pre>
+<p><code>launchInjectingWebSupport(into view: UIView)</code></p>
+
+<p>Launches Ada Chat into a specified subview.</p>
+<h4 id='ios-sdk-api-methods-launchmodalwebsupport'>launchModalWebSupport</h4><pre class="highlight swift tab-swift"><code><span class="n">adaFramework</span><span class="o">.</span><span class="nf">launchModalWebSupport</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
 </code></pre>
 <p><code>launchModalWebSupport(from viewController: UIViewController)</code></p>
 
@@ -1015,11 +1024,10 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 <p><code>launchNavWebSupport(from navController: UINavigationController)</code></p>
 
 <p>Pushes a view containing Ada Chat to the top of your navigational stack.</p>
-<h4 id='ios-sdk-api-methods-launchinjectingwebsupport'>launchInjectingWebSupport</h4><pre class="highlight swift tab-swift"><code><span class="n">adaFramework</span><span class="o">.</span><span class="nf">launchInjectingWebSupport</span><span class="p">(</span><span class="nv">into</span><span class="p">:</span> <span class="n">injectingView</span><span class="p">)</span>
-</code></pre>
-<p><code>launchInjectingWebSupport(into view: UIView)</code></p>
+<h4 id='ios-sdk-api-methods-reset'>reset</h4>
+<p><code>reset()</code></p>
 
-<p>Launches Ada Chat into a specified subview.</p>
+<p>Can be used to create a new <code>chatter</code> and refresh the Chat window. </p>
 <h4 id='ios-sdk-api-methods-setmetafields'>setMetaFields</h4><pre class="highlight swift tab-swift"><code><span class="n">adaFramework</span><span class="o">.</span><span class="nf">setMetaFields</span><span class="p">([</span>
     <span class="s">"firstName"</span><span class="p">:</span> <span class="s">"Jane"</span><span class="p">,</span>
     <span class="s">"lastName"</span><span class="p">:</span> <span class="s">"Doe"</span><span class="p">,</span>
@@ -1029,14 +1037,6 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 <p><code>setMetaFields(_ fields: [String: Any])</code></p>
 
 <p>Used to set meta data for a chatter after instantiation. This is useful if you need to update user data after Ada Chat has already launched.</p>
-<h4 id='ios-sdk-api-methods-reset'>reset</h4>
-<p><code>reset()</code></p>
-
-<p>Can be used to create a new <code>chatter</code> and refresh the Chat window. </p>
-<h4 id='ios-sdk-api-methods-deletehistory'>deleteHistory</h4>
-<p><code>deleteHistory()</code></p>
-
-<p>Deletes the <code>chatter</code> used to fetch conversation logs for an end-user from storage. When a user opens a new Chat window a new <code>chatter</code> will be generated.</p>
 <h1 id='android-sdk'>Android SDK</h1>
 <p>The Ada Android SDK is a small framework that is used to embed your Ada Chat bot into your native Android application.</p>
 <h2 id='android-sdk-installation'>Installation</h2>
