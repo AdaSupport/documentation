@@ -513,7 +513,7 @@
                                     <a href="#android-sdk-api-settings-cluster" class="toc-h4 toc-link" data-title="cluster">cluster</a>
                                   </li>
                                   <li>
-                                    <a href="#android-sdk-api-settings-eventcallback" class="toc-h4 toc-link" data-title="eventCallback">eventCallback</a>
+                                    <a href="#android-sdk-api-settings-addeventcallback" class="toc-h4 toc-link" data-title="addEventCallback">addEventCallback</a>
                                   </li>
                                   <li>
                                     <a href="#android-sdk-api-settings-greeting" class="toc-h4 toc-link" data-title="greeting">greeting</a>
@@ -1231,7 +1231,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 <p>Using the SDK, you can configure the initial chat settings for greater customization. Settings can be configured for XML, or programmatically using the<code>AdaEmbedView.Settings</code> class.</p>
 <h4 id='android-sdk-api-settings-cluster'>cluster</h4>
 <p>Specifies the Kubernetes cluster to be used. Unless directed by an Ada team member, you will not need to change this value.</p>
-<h4 id='android-sdk-api-settings-eventcallback'>eventCallback</h4><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">eventCallback</span><span class="p">:</span> <span class="p">(</span><span class="n">event</span><span class="p">:</span> <span class="n">Event</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Unit</span> <span class="p">=</span> <span class="p">{</span>
+<h4 id='android-sdk-api-settings-addeventcallback'>addEventCallback</h4><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">eventCallback</span><span class="p">:</span> <span class="p">(</span><span class="n">event</span><span class="p">:</span> <span class="n">Event</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Unit</span> <span class="p">=</span> <span class="p">{</span>
     <span class="c1">//some action with event
 </span><span class="p">}</span>
 
@@ -1251,7 +1251,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 // Or...
 </span><span class="n">adaView</span><span class="p">.</span><span class="n">removeEventCallbacks</span><span class="p">()</span> <span class="c1">// Remove all callbacks
 </span></code></pre>
-<p>Used in conjunction with the Event Trigger block, <code>eventCallbacks</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
+<p>Used in conjunction with the Event Trigger block, <code>addEventCallback</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
 <h4 id='android-sdk-api-settings-greeting'>greeting</h4>
 <p>This can be used to customize the greeting messages that new users see. This is useful for setting view-specific greetings across your app. The greeting should correspond to the ID of the Answer you would like to use. The ID can be found in the URL of the corresponding Answer in the dashboard.</p>
 <h4 id='android-sdk-api-settings-handle'>handle</h4>
