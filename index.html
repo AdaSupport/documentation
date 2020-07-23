@@ -794,7 +794,7 @@ Setting custom styles based on Embed2 elements is inherently brittle, and can ca
 <h4 id='embed2-api-reference-settings-eventcallbacks'>eventCallbacks</h4>
 <p><code>eventCallbacks?: { [eventName: string]: (jsEvent: object) =&gt; void };</code></p>
 
-<p>Used in conjunction with the Event Trigger block, <code>eventCallbacks</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
+<p>Used in conjunction with the Chat Transfer Block or Event Trigger block, <code>eventCallbacks</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
 <h4 id='embed2-api-reference-settings-greeting'>greeting</h4>
 <p><code>greeting?: string;</code></p>
 
@@ -1017,7 +1017,7 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <h4 id='ios-sdk-api-settings-eventcallbacks'>eventCallbacks</h4>
 <p><code>eventCallbacks: [String: (_ event: [String: Any]) -&gt; Void]? = nil</code></p>
 
-<p>Used in conjunction with the Event Trigger block, <code>eventCallbacks</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
+<p>Used in conjunction with the Chat Transfer Block or Event Trigger block, <code>eventCallbacks</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
 <h4 id='ios-sdk-api-settings-greeting'>greeting</h4>
 <p><code>greeting: String = &quot;&quot;</code></p>
 
@@ -1251,7 +1251,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 // Or...
 </span><span class="n">adaView</span><span class="p">.</span><span class="n">removeEventCallbacks</span><span class="p">()</span> <span class="c1">// Remove all callbacks
 </span></code></pre>
-<p>Used in conjunction with the Event Trigger block, <code>addEventCallback</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
+<p>Used in conjunction with the Chat Transfer Block or Event Trigger block, <code>addEventCallback</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
 <h4 id='android-sdk-api-settings-greeting'>greeting</h4>
 <p>This can be used to customize the greeting messages that new users see. This is useful for setting view-specific greetings across your app. The greeting should correspond to the ID of the Answer you would like to use. The ID can be found in the URL of the corresponding Answer in the dashboard.</p>
 <h4 id='android-sdk-api-settings-handle'>handle</h4>
