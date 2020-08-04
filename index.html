@@ -279,6 +279,9 @@
                                     <a href="#embed2-api-reference-settings-crosswindowpersistence" class="toc-h4 toc-link" data-title="crossWindowPersistence">crossWindowPersistence</a>
                                   </li>
                                   <li>
+                                    <a href="#embed2-api-reference-settings-customdomains" class="toc-h4 toc-link" data-title="customDomains">customDomains</a>
+                                  </li>
+                                  <li>
                                     <a href="#embed2-api-reference-settings-domain" class="toc-h4 toc-link" data-title="domain">domain</a>
                                   </li>
                                   <li>
@@ -778,6 +781,24 @@
 
 <aside class="notice">
 We recommend enabling this feature if your bot uses Ada Glass.
+</aside>
+<h4 id='embed2-api-reference-settings-customdomains'>customDomains</h4><pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">customDomains</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">embedModern</span><span class="p">:</span> <span class="s2">"https://my-cdn.com/embed2/&lt;hash&gt;/client-modern.js"</span><span class="p">,</span>
+      <span class="na">embedLegacy</span><span class="p">:</span> <span class="s2">"https://my-cdn.com/embed2/&lt;hash&gt;/client-legacy.js"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+<p><code>customDomains?: { embedLegacy: string; embedModern: string; };</code></p>
+
+<p>To reduce bundle size for users on modern browsers, Embed2 dynamically loads either a <code>modern</code> or <code>legacy</code> client script. However, this also means that serving Embed2 from your own domain is not as easy as hosting <a href="https://static.ada.support/embed2.js">the entry script</a>.</p>
+
+<p>To get around this issue, the <code>customDomains</code> option can be used to specify the dynamic client scripts (which you have self-hosted).</p>
+
+<aside class="notice">
+The Embed2 entry and client scripts must all use the same version. If you require assistance getting the latest versions please reach out to an Ada bot specialist.
 </aside>
 <h4 id='embed2-api-reference-settings-domain'>domain</h4>
 <p><code>domain?: string;</code></p>
