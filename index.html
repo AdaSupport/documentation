@@ -560,6 +560,68 @@
               </ul>
           </li>
           <li>
+            <a href="#react-native-sdk" class="toc-h1 toc-link" data-title="React Native SDK">React Native SDK</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#react-native-sdk-installation" class="toc-h2 toc-link" data-title="Installation">Installation</a>
+                  </li>
+                  <li>
+                    <a href="#react-native-sdk-quick-start" class="toc-h2 toc-link" data-title="Quick Start">Quick Start</a>
+                  </li>
+                  <li>
+                    <a href="#react-native-sdk-api" class="toc-h2 toc-link" data-title="API">API</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#react-native-sdk-api-props" class="toc-h3 toc-link" data-title="Props">Props</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#react-native-sdk-api-props-cluster" class="toc-h4 toc-link" data-title="cluster">cluster</a>
+                                  </li>
+                                  <li>
+                                    <a href="#react-native-sdk-api-props-eventcallbacks" class="toc-h4 toc-link" data-title="eventCallbacks">eventCallbacks</a>
+                                  </li>
+                                  <li>
+                                    <a href="#react-native-sdk-api-props-greeting" class="toc-h4 toc-link" data-title="greeting">greeting</a>
+                                  </li>
+                                  <li>
+                                    <a href="#react-native-sdk-api-props-handle" class="toc-h4 toc-link" data-title="handle">handle</a>
+                                  </li>
+                                  <li>
+                                    <a href="#react-native-sdk-api-props-language" class="toc-h4 toc-link" data-title="language">language</a>
+                                  </li>
+                                  <li>
+                                    <a href="#react-native-sdk-api-props-metafields" class="toc-h4 toc-link" data-title="metaFields">metaFields</a>
+                                  </li>
+                                  <li>
+                                    <a href="#react-native-sdk-api-props-styles" class="toc-h4 toc-link" data-title="styles">styles</a>
+                                  </li>
+                                  <li>
+                                    <a href="#react-native-sdk-api-props-thirdpartycookiesenabled-android" class="toc-h4 toc-link" data-title="thirdPartyCookiesEnabled (Android)">thirdPartyCookiesEnabled (Android)</a>
+                                  </li>
+                                  <li>
+                                    <a href="#react-native-sdk-api-props-zdchatterauthcallback" class="toc-h4 toc-link" data-title="zdChatterAuthCallback">zdChatterAuthCallback</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#react-native-sdk-api-actions" class="toc-h3 toc-link" data-title="Actions">Actions</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#react-native-sdk-api-actions-deletehistory" class="toc-h4 toc-link" data-title="deleteHistory">deleteHistory</a>
+                                  </li>
+                                  <li>
+                                    <a href="#react-native-sdk-api-actions-reset" class="toc-h4 toc-link" data-title="reset">reset</a>
+                                  </li>
+                                  <li>
+                                    <a href="#react-native-sdk-api-actions-setmetafields" class="toc-h4 toc-link" data-title="setMetaFields">setMetaFields</a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#questions" class="toc-h1 toc-link" data-title="Questions">Questions</a>
           </li>
       </ul>
@@ -1350,6 +1412,122 @@ Or with optional params:</p>
 <span class="n">adaDialog</span><span class="p">.</span><span class="n">reset</span><span class="p">()</span>
 </code></pre>
 <p>To call actions in the <code>AdaEmbedDialog</code>, you can obtain <code>AdaEmbedDialog</code> instance from FragmentManager:</p>
+<h1 id='react-native-sdk'>React Native SDK</h1>
+<p>The Ada React Native SDK is a small framework that is used to embed your Ada Chat bot into your React Native application.</p>
+<h2 id='react-native-sdk-installation'>Installation</h2><pre class="highlight shell tab-shell"><code><span class="c"># With npm</span>
+npm install --save @ada-support/react-native-sdk
+
+<span class="c"># With yarn</span>
+yarn add @ada-support/react-native-sdk
+</code></pre>
+<p>The Ada React Native SDK is based on <a href="https://github.com/react-native-community/react-native-webview">react-native-webview</a>. Before you can use the SDK, you will need to follow the react-native-webview <a href="https://github.com/react-native-community/react-native-webview/blob/master/docs/Getting-Started.md">&quot;Getting Started Guide&quot;</a>.</p>
+
+<p>When you&#39;ve configured react-native-webview, simply install the Ada React Native SDK via NPM.</p>
+<h2 id='react-native-sdk-quick-start'>Quick Start</h2><pre class="highlight jsx tab-jsx"><code><span class="kr">import</span> <span class="nx">AdaEmbedView</span> <span class="nx">from</span> <span class="s1">'@ada-support/react-native-sdk'</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="kr">class</span> <span class="nx">MyComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nc">AdaEmbedView</span> <span class="na">handle=</span><span class="s2">"ada-example"</span><span class="p">/&gt;;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>Once you have installed the Ada React Native SDK, you are ready to use it in your app! Simply import the <code>AdaEmbedView</code> component, then render it. Note that you must pass a valid <code>handle</code> for the Chat window to work.</p>
+<h2 id='react-native-sdk-api'>API</h2><h3 id='react-native-sdk-api-props'>Props</h3>
+<p><code>AdaEmbedView</code> can take various props to customize the behaviour of your Chat bot.</p>
+<h4 id='react-native-sdk-api-props-cluster'>cluster</h4>
+<p><code>cluster?: string;</code></p>
+
+<p>Specifies the Kubernetes cluster to be used. Unless directed by an Ada team member, you will not need to change this value.</p>
+<h4 id='react-native-sdk-api-props-eventcallbacks'>eventCallbacks</h4><pre class="highlight jsx tab-jsx"><code><span class="nx">eventCallbacks</span><span class="o">=</span><span class="p">{{</span>
+  <span class="s2">"*"</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// This function will catch all events</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">event_name</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="s2">"my_event_name"</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// This function will catch only events with the specified name (my_event_name)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">event_name</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}}</span>
+</code></pre>
+<p><code>eventCallbacks?: { [eventName: string]: (jsEvent: object) =&gt; void };</code></p>
+
+<p>Used in conjunction with the Chat Transfer Block or Event Trigger block, <code>eventCallbacks</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
+<h4 id='react-native-sdk-api-props-greeting'>greeting</h4>
+<p><code>greeting?: string;</code></p>
+
+<p>This can be used to customize the greeting messages that new users see. This is useful for setting view-specific greetings across your app. The greeting should correspond to the ID of the Answer you would like to use. The ID can be found in the URL of the corresponding Answer in the dashboard.</p>
+<h4 id='react-native-sdk-api-props-handle'>handle</h4>
+<p><code>handle: string;</code></p>
+
+<p>The handle for your bot. This is a required field.</p>
+<h4 id='react-native-sdk-api-props-language'>language</h4>
+<p><code>language?: string;</code></p>
+
+<p>Takes in a language code to programatically set the bot language. Languages must first be turned on in the Settings &gt; Multilingual page of your Ada dashboard. Language codes follow the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 language format</a>.</p>
+<h4 id='react-native-sdk-api-props-metafields'>metaFields</h4><pre class="highlight jsx tab-jsx"><code><span class="nx">metaFields</span><span class="o">=</span><span class="p">{{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s2">"Some name"</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">30</span>
+<span class="p">}}</span>
+</code></pre>
+<p><code>metaFields?: object;</code></p>
+
+<p>Used to pass meta information about a <code>chatter</code>. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the phone_number and name for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations page of your Ada dashboard. Should you need to programatically change these values after bot setup, you can make use of the <a href="#setmetafields_-fields-string-any">setMetaFields</a> method below.</p>
+<h4 id='react-native-sdk-api-props-styles'>styles</h4>
+<p><code>styles?: string;</code></p>
+
+<p>The styles option can be used to override default styles inside of Web Chat. The value of the string should be the CSS rule-set you wish to apply inside the Web Chat iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
+
+<aside class="warning">
+Setting custom styles based on Chat elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
+</aside>
+<h4 id='react-native-sdk-api-props-thirdpartycookiesenabled-android'>thirdPartyCookiesEnabled (Android)</h4>
+<p><code>thirdPartyCookiesEnabled?: boolean;</code></p>
+
+<p>The <code>thirdPartyCookies</code> prop can be set to enable third-party cookies in the <code>AdaEmbedView</code>. This feature is only available in Android. The default value is <code>false</code>.</p>
+<h4 id='react-native-sdk-api-props-zdchatterauthcallback'>zdChatterAuthCallback</h4>
+<p><code>zdChatterAuthCallback?(callback: (token: string) =&gt; void): void;</code></p>
+<pre class="highlight jsx tab-jsx"><code><span class="nx">zdChatterAuthCallback</span><span class="o">=</span><span class="p">{</span><span class="nx">callback</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">getTokenFromAPI</span><span class="p">();</span> <span class="c1">// Get a fresh JWT token from your API</span>
+  <span class="nx">callback</span><span class="p">(</span><span class="nx">token</span><span class="p">);</span>
+<span class="p">}}</span>
+</code></pre>
+<p>The <code>zdChatterAuthCallback</code> can be used to request a JWT token from your API, and then have it passed to Ada. This allows for a shared trust between Ada and Zendesk, and in turn for verifiable <code>chatter</code> identity.</p>
+<h3 id='react-native-sdk-api-actions'>Actions</h3><pre class="highlight jsx tab-jsx"><code><span class="kr">import</span> <span class="nx">AdaEmbedView</span> <span class="nx">from</span> <span class="s1">'@ada-support/react-native-sdk'</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="kr">class</span> <span class="nx">MyComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nc">AdaEmbedView</span> 
+            <span class="na">handle=</span><span class="s2">"ada-example"</span>
+            <span class="na">ref=</span><span class="si">{</span><span class="nx">ref</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">adaEmbedView</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">)</span><span class="si">}</span><span class="p">/&gt;;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>Actions can be called directly from the <code>AdaEmbedView</code> ref. This allows you to modify Ada Chat without using state/props to trigger a re-render of the entire subtree.</p>
+<h4 id='react-native-sdk-api-actions-deletehistory'>deleteHistory</h4><pre class="highlight jsx tab-jsx"><code><span class="k">this</span><span class="p">.</span><span class="nx">adaEmbedView</span><span class="p">.</span><span class="nx">deleteHistory</span><span class="p">();</span>
+</code></pre>
+<p>Deletes the <code>chatter</code> used to fetch conversation logs for an end-user from storage. When a user opens a new Chat window, a new <code>chatter</code> will be generated.</p>
+<h4 id='react-native-sdk-api-actions-reset'>reset</h4><pre class="highlight jsx tab-jsx"><code><span class="k">this</span><span class="p">.</span><span class="nx">adaEmbedView</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+
+<span class="c1">// With options</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">adaEmbedView</span><span class="p">.</span><span class="nx">reset</span><span class="p">({</span>
+  <span class="na">metaFields</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s2">"Some name"</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span> <span class="mi">30</span>
+  <span class="p">},</span>
+  <span class="na">resetChatHistory</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">});</span>
+</code></pre>
+<p>Creates a new <code>chatter</code> and refreshes the Chat window. <code>reset</code> can take an optional object allowing <code>language</code>, <code>metaFields</code>, and <code>greeting</code> to be changed for the new <code>chatter</code>.</p>
+
+<p>To prevent creating a new <code>chatter</code> (and maintain conversation history), <code>resetChatHistory</code> can be passed to the object with a value of <code>false</code>.</p>
+<h4 id='react-native-sdk-api-actions-setmetafields'>setMetaFields</h4><pre class="highlight jsx tab-jsx"><code><span class="k">this</span><span class="p">.</span><span class="nx">adaEmbedView</span><span class="p">.</span><span class="nx">setMetaFields</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s2">"Some name"</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">30</span>
+<span class="p">});</span>
+</code></pre>
+<p>Used to set meta data for a <code>chatter</code> after instantiation. This is useful if you need to update user data after Ada Chat has already launched.</p>
 <h1 id='questions'>Questions</h1>
 <p>Need some help? Get in touch with us at <a href="mailto:help@ada.support">help@ada.support</a>.</p>
 
