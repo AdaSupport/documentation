@@ -569,6 +569,17 @@
                     <a href="#react-native-sdk-quick-start" class="toc-h2 toc-link" data-title="Quick Start">Quick Start</a>
                   </li>
                   <li>
+                    <a href="#react-native-sdk-file-permissions" class="toc-h2 toc-link" data-title="File Permissions">File Permissions</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#react-native-sdk-file-permissions-ios" class="toc-h3 toc-link" data-title="iOS">iOS</a>
+                          </li>
+                          <li>
+                            <a href="#react-native-sdk-file-permissions-android" class="toc-h3 toc-link" data-title="Android">Android</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
                     <a href="#react-native-sdk-api" class="toc-h2 toc-link" data-title="API">API</a>
                       <ul class="toc-list-h3">
                           <li>
@@ -1433,6 +1444,29 @@ yarn add @ada-support/react-native-sdk
 <span class="p">}</span>
 </code></pre>
 <p>Once you have installed the Ada React Native SDK, you are ready to use it in your app! Simply import the <code>AdaEmbedView</code> component, then render it. Note that you must pass a valid <code>handle</code> for the Chat window to work.</p>
+<h2 id='react-native-sdk-file-permissions'>File Permissions</h2>
+<p>Some functionality in the Ada Chat bot will not work unless permissions are explicitly given.</p>
+<h3 id='react-native-sdk-file-permissions-ios'>iOS</h3><pre class="highlight xml tab-xml"><code><span class="c">&lt;!-- Photo capture --&gt;</span>
+<span class="nt">&lt;key&gt;</span>NSCameraUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>Take pictures for certain activities<span class="nt">&lt;/string&gt;</span>
+
+<span class="c">&lt;!-- Gallery selection --&gt;</span>
+<span class="nt">&lt;key&gt;</span>NSPhotoLibraryUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>Select pictures for certain activities<span class="nt">&lt;/string&gt;</span>
+
+<span class="c">&lt;!-- Video recording --&gt;</span>
+<span class="nt">&lt;key&gt;</span>NSMicrophoneUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>Need microphone access for recording videos<span class="nt">&lt;/string&gt;</span>
+</code></pre>
+<p>For iOS, all you need to do is specify the permissions in your <code>ios/[project]/Info.plist</code> file.</p>
+<h3 id='react-native-sdk-file-permissions-android'>Android</h3><pre class="highlight xml tab-xml"><code><span class="nt">&lt;manifest</span> <span class="err">...</span><span class="nt">&gt;</span>
+  ...
+  <span class="c">&lt;!-- this is required only for Android 4.1-5.1 (api 16-22)  --&gt;</span>
+  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span> <span class="nt">/&gt;</span>
+  ...
+<span class="nt">&lt;/manifest&gt;</span>
+</code></pre>
+<p>For Android, add permissions in <code>AndroidManifest.xml</code>. </p>
 <h2 id='react-native-sdk-api'>API</h2><h3 id='react-native-sdk-api-props'>Props</h3>
 <p><code>AdaEmbedView</code> can take various props to customize the behaviour of your Chat bot.</p>
 <h4 id='react-native-sdk-api-props-cluster'>cluster</h4>
