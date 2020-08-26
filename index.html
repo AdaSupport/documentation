@@ -312,6 +312,9 @@
                                     <a href="#embed2-api-reference-settings-parentelement" class="toc-h4 toc-link" data-title="parentElement">parentElement</a>
                                   </li>
                                   <li>
+                                    <a href="#embed2-api-reference-settings-preload" class="toc-h4 toc-link" data-title="preload">preload</a>
+                                  </li>
+                                  <li>
                                     <a href="#embed2-api-reference-settings-privatemode" class="toc-h4 toc-link" data-title="privateMode">privateMode</a>
                                   </li>
                                   <li>
@@ -687,6 +690,8 @@
 <p><a href="https://jsfiddle.net/1cdnye94/">You can see see a working example here.</a></p>
 <h2 id='embed2-advanced-setup'>Advanced Setup</h2>
 <p>In some situations, the quick setup above may be too simplistic. You may want to delay instantiation of Embed2 until a certain event, your application might be a Single-Page App and you need more control, or perhaps you don&#39;t want to bind your settings to the window object. Whatever the reason, Embed2 ships with additional features to help you get setup.</p>
+
+<p>If you still require recommendations on how best to implement the Embed2 script, please reach out to an Ada team member. However, please note that all implementations are ultimately the responsiblity of your development team.</p>
 <h3 id='embed2-advanced-setup-lazy-mode'>Lazy Mode</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script
   </span><span class="na">id=</span><span class="s">"__ada"</span>
   <span class="na">data-lazy</span>
@@ -945,6 +950,12 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <p><code>parentElement?: string | HTMLElement;</code></p>
 
 <p>Specifies where to mount the <code>&lt;iframe&gt;</code> if the default side drawer is not desired. Accepts the <code>HTMLElement</code> or element <code>id</code> of the desired parent element.</p>
+<h4 id='embed2-api-reference-settings-preload'>preload</h4>
+<p><code>preload?: boolean;</code></p>
+
+<p>By default, Embed2 will only load Web Chat once the user has clicked the Chat button. In this manner, the net Ada bundle size is reduced for users who never engage with Ada Web Chat. However, this will also cause longer wait times for users loading Web Chat, as they must first fetch the Web Chat bundle before the UI can load. On slow internet connections (esp. mobile users), this delay may be exacerbated.</p>
+
+<p>Should you wish, you may preload Web Chat by setting the <code>preload</code> option to <code>true</code>.</p>
 <h4 id='embed2-api-reference-settings-privatemode'>privateMode</h4>
 <p><code>privateMode?: boolean;</code></p>
 
