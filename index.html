@@ -244,6 +244,9 @@
                     <a href="#embed2-advanced-setup" class="toc-h2 toc-link" data-title="Advanced Setup">Advanced Setup</a>
                       <ul class="toc-list-h3">
                           <li>
+                            <a href="#embed2-advanced-setup-ada-settings" class="toc-h3 toc-link" data-title="Ada Settings">Ada Settings</a>
+                          </li>
+                          <li>
                             <a href="#embed2-advanced-setup-lazy-mode" class="toc-h3 toc-link" data-title="Lazy Mode">Lazy Mode</a>
                           </li>
                           <li>
@@ -689,9 +692,24 @@
 
 <p><a href="https://jsfiddle.net/1cdnye94/">You can see see a working example here.</a></p>
 <h2 id='embed2-advanced-setup'>Advanced Setup</h2>
-<p>In some situations, the quick setup above may be too simplistic. You may want to delay instantiation of Embed2 until a certain event, your application might be a Single-Page App and you need more control, or perhaps you don&#39;t want to bind your settings to the window object. Whatever the reason, Embed2 ships with additional features to help you get setup.</p>
+<p>In some situations, the quick setup above may be too simplistic. You may want to delay instantiation of Embed2 until a certain event, your application might be a Single-Page App and you need more control, or perhaps you want to set the bot language. Whatever the reason, Embed2 ships with additional features to help you get setup.</p>
 
 <p>If you still require recommendations on how best to implement the Embed2 script, please reach out to an Ada team member. However, please note that all implementations are ultimately the responsiblity of your development team.</p>
+<h3 id='embed2-advanced-setup-ada-settings'>Ada Settings</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+...
+<span class="c">&lt;!-- Define the Embed script afterwards --&gt;</span>
+</code></pre>
+<p>Embed2 supports a number of configurable options which can be set through an <code>adaSettings</code> object you define on your <code>window</code> scope. Alternatively, settings can also be passed to the <code>adaEmbed.start</code> method (see <a href="#embed2-advanced-setup-lazy-mode">Lazy Mode</a> below).</p>
+
+<p>A full list of <code>adaSettings</code> options can be found in <a href="#embed2-api-reference">API Reference</a>.</p>
+
+<aside class="warning">
+Embed2 requires `window.adaSettings` be defined before the script loads. You must therefore either define `window.adaSettings` before the Embed script, or make use of async on your embed script (see Async below).
+</aside>
 <h3 id='embed2-advanced-setup-lazy-mode'>Lazy Mode</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script
   </span><span class="na">id=</span><span class="s">"__ada"</span>
   <span class="na">data-lazy</span>
