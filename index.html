@@ -196,7 +196,7 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen-8032b505.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-9b26ded7.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-dc442ed7.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-721d054c.js"></script>
   </head>
@@ -1123,6 +1123,8 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <p>Once you have installed the Ada iOS SDK, you are ready to use it in your app! To start, import <code>AdaEmbedFramework</code> into your controller. Then, create an instance of the <code>AdaWebHost</code>.</p>
 
 <blockquote>
+<p>The lazy property prevents AdaWebHost from initializing until the property is used. Use of this property may help to prevent unwanted chatters from being created in the background.</p>
+
 <p>Please note &quot;ada-example&quot; is being used for demonstration purposes. Be sure to sure modify &quot;handle&quot;, as well as any other values as needed for your bot.</p>
 </blockquote>
 
