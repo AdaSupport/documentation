@@ -1118,7 +1118,7 @@ Meta field keys should not include whitespace, emojis, special characters or per
 
 <span class="cp"># ...</span>
 
-<span class="k">var</span> <span class="nv">adaFramework</span> <span class="o">=</span> <span class="kt">AdaWebHost</span><span class="p">(</span><span class="nv">handle</span><span class="p">:</span> <span class="s">"ada-example"</span><span class="p">)</span>
+<span class="kd">lazy</span> <span class="k">var</span> <span class="nv">adaFramework</span> <span class="o">=</span> <span class="kt">AdaWebHost</span><span class="p">(</span><span class="nv">handle</span><span class="p">:</span> <span class="s">"ada-example"</span><span class="p">)</span>
 </code></pre>
 <p>Once you have installed the Ada iOS SDK, you are ready to use it in your app! To start, import <code>AdaEmbedFramework</code> into your controller. Then, create an instance of the <code>AdaWebHost</code>.</p>
 
@@ -1153,7 +1153,7 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <p><code>language: String = &quot;&quot;</code></p>
 
 <p>Takes in a language code to programatically set the bot language. Languages must first be turned on in the Settings &gt; Multilingual page of your Ada dashboard. Language codes follow the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 language format</a>.</p>
-<h4 id='ios-sdk-api-settings-metafields'>metaFields</h4><pre class="highlight swift tab-swift"><code><span class="k">var</span> <span class="nv">adaFramework</span> <span class="o">=</span> <span class="kt">AdaWebHost</span><span class="p">(</span><span class="nv">handle</span><span class="p">:</span> <span class="s">"ada-example"</span><span class="p">,</span> <span class="nv">metafields</span><span class="p">:</span> <span class="p">[</span><span class="s">"tier"</span><span class="p">:</span> <span class="s">"pro"</span><span class="p">])</span>
+<h4 id='ios-sdk-api-settings-metafields'>metaFields</h4><pre class="highlight swift tab-swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">adaFramework</span> <span class="o">=</span> <span class="kt">AdaWebHost</span><span class="p">(</span><span class="nv">handle</span><span class="p">:</span> <span class="s">"ada-example"</span><span class="p">,</span> <span class="nv">metafields</span><span class="p">:</span> <span class="p">[</span><span class="s">"tier"</span><span class="p">:</span> <span class="s">"pro"</span><span class="p">])</span>
 </code></pre>
 <p><code>metafields: [String: String]? = [:]</code></p>
 
@@ -1172,7 +1172,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 </aside>
 <h4 id='ios-sdk-api-settings-zdchatterauthcallback'>zdChatterAuthCallback</h4>
 <p><code>zdChatterAuthCallback: ((((_ token: String) -&gt; Void)) -&gt; Void)? = nil</code></p>
-<pre class="highlight swift tab-swift"><code><span class="k">var</span> <span class="nv">adaFramework</span> <span class="o">=</span> <span class="kt">AdaWebHost</span><span class="p">(</span><span class="nv">handle</span><span class="p">:</span> <span class="s">"nic"</span><span class="p">,</span> <span class="nv">zendeskAuthCallback</span><span class="p">:</span> <span class="p">{</span> <span class="n">callback</span> <span class="k">in</span>
+<pre class="highlight swift tab-swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">adaFramework</span> <span class="o">=</span> <span class="kt">AdaWebHost</span><span class="p">(</span><span class="nv">handle</span><span class="p">:</span> <span class="s">"nic"</span><span class="p">,</span> <span class="nv">zendeskAuthCallback</span><span class="p">:</span> <span class="p">{</span> <span class="n">callback</span> <span class="k">in</span>
     <span class="c1">// Request JWT from your API</span>
     <span class="c1">// Then...</span>
     <span class="nf">callback</span><span class="p">(</span><span class="s">"your.JWT"</span><span class="p">)</span>
