@@ -865,7 +865,7 @@ Embed2 requires `window.adaSettings` be defined before the script loads. You mus
 <h4 id='embed2-api-reference-settings-chattertokencallback'>chatterTokenCallback</h4>
 <p><code>chatterTokenCallback?(chatter: string): void;</code></p>
 
-<p>Specifies a callback for when the <code>chatter</code> token has been set in Chat.</p>
+<p>Specifies a callback for when the <code>chatter</code> token has been set in Chat.  This is called when chat is first opened by a chatter.</p>
 <h4 id='embed2-api-reference-settings-cluster'>cluster</h4>
 <p><code>cluster?: string;</code></p>
 
@@ -903,7 +903,7 @@ The Embed2 entry and client scripts must all use the same version. If you requir
 <h4 id='embed2-api-reference-settings-embedstyles'>embedStyles</h4>
 <p><code>embedStyles?: string;</code></p>
 
-<p>The embedStyles option can be used to override default styles inside Embed2 elements. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
+<p>The embedStyles option can be used to override default styles inside Embed2 elements. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature, and may not be available in all packages.</p>
 
 <aside class="warning">
 Setting custom styles based on Embed2 elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
@@ -985,7 +985,7 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <h4 id='embed2-api-reference-settings-styles'>styles</h4>
 <p><code>styles?: string;</code></p>
 
-<p>The styles option can be used to override default styles inside the Web Chat iFrame. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
+<p>The styles option can be used to override default styles inside the Web Chat iFrame. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature, and may not be available in all packages.</p>
 
 <aside class="warning">
 Setting custom styles based on Chat elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
@@ -1167,7 +1167,7 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <h4 id='ios-sdk-api-settings-styles'>styles</h4>
 <p><code>styles: String = &quot;&quot;</code></p>
 
-<p>The styles option can be used to override default styles inside of Web Chat. The value of the string should be the CSS rule-set you wish to apply inside the Web Chat iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
+<p>The styles option can be used to override default styles inside of Web Chat. The value of the string should be the CSS rule-set you wish to apply inside the Web Chat iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature, and may not be available in all packages.</p>
 
 <aside class="warning">
 Setting custom styles based on Chat elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
@@ -1388,7 +1388,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 
 <p>You can also set &quot;meta fields&quot; using XML. For this, you need to create a JSON file in the res/raw directory, and set the reference to the view declaration:</p>
 <h4 id='android-sdk-api-settings-styles'>styles</h4>
-<p>The <code>styles</code> option can be used to override default styles inside of Web Chat. The value of the string should be the CSS rule-set you wish to apply inside the Web Chat iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
+<p>The <code>styles</code> option can be used to override default styles inside of Web Chat. The value of the string should be the CSS rule-set you wish to apply inside the Web Chat iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature, and may not be available in all packages.</p>
 
 <aside class="warning">
 Setting custom styles based on Chat elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
@@ -1541,7 +1541,7 @@ yarn add @ada-support/react-native-sdk
 <h4 id='react-native-sdk-api-props-styles'>styles</h4>
 <p><code>styles?: string;</code></p>
 
-<p>The styles option can be used to override default styles inside of Web Chat. The value of the string should be the CSS rule-set you wish to apply inside the Web Chat iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature.</p>
+<p>The styles option can be used to override default styles inside of Web Chat. The value of the string should be the CSS rule-set you wish to apply inside the Web Chat iFrame. Note that the <code>ui_customization</code> feature flag is required to use this feature, and may not be available in all packages.</p>
 
 <aside class="warning">
 Setting custom styles based on Chat elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
