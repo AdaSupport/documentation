@@ -270,9 +270,6 @@
                                     <a href="#embed2-api-reference-settings-adareadycallback" class="toc-h4 toc-link" data-title="adaReadyCallback">adaReadyCallback</a>
                                   </li>
                                   <li>
-                                    <a href="#embed2-api-reference-settings-analyticscallback" class="toc-h4 toc-link" data-title="analyticsCallback">analyticsCallback</a>
-                                  </li>
-                                  <li>
                                     <a href="#embed2-api-reference-settings-chattertokencallback" class="toc-h4 toc-link" data-title="chatterTokenCallback">chatterTokenCallback</a>
                                   </li>
                                   <li>
@@ -839,29 +836,6 @@ Embed2 requires `window.adaSettings` be defined before the script loads. You mus
 <p><code>adaReadyCallback?(params: { isRolledOut: boolean }): void;</code></p>
 
 <p>Specifies a callback function to be called when Embed2 has finished setting up. This is especially useful when Embed2 is loaded asynchronously.</p>
-<h4 id='embed2-api-reference-settings-analyticscallback'>analyticsCallback</h4><pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">adaSettings</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="na">analyticsCallback</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="c1">// Here is where you can forward this event to Adobe (or elsewhere)</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="nt">&lt;/script&gt;</span>
-</code></pre>
-<blockquote>
-<p>Example event</p>
-</blockquote>
-<pre class="highlight javascript"><code><span class="p">{</span>
-  <span class="nl">chatter_id</span><span class="p">:</span> <span class="s2">"5d9f84b2a35763fc71cb7bf"</span><span class="p">,</span>
-  <span class="nx">session_id</span><span class="p">:</span> <span class="s2">"59f84b22c4683df7c38bf69"</span><span class="p">,</span>
-  <span class="nx">answer_name</span><span class="p">:</span> <span class="s2">"Greeting"</span><span class="p">,</span>
-  <span class="nx">event_name</span><span class="p">:</span> <span class="s2">"answer presented"</span><span class="p">,</span>
-  <span class="nx">authenticated</span><span class="p">:</span> <span class="kc">false</span>
-<span class="p">}</span>
-</code></pre>
-<p><code>analyticsCallback?(analytics: object): void;</code></p>
-
-<p>Can be used to pass back data analytics. Make sure you have the <code>adobe_analytics</code> feature enabled on your bot.</p>
 <h4 id='embed2-api-reference-settings-chattertokencallback'>chatterTokenCallback</h4>
 <p><code>chatterTokenCallback?(chatter: string): void;</code></p>
 
@@ -968,6 +942,10 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <p><code>parentElement?: string | HTMLElement;</code></p>
 
 <p>Specifies where to mount the <code>&lt;iframe&gt;</code> if the default side drawer is not desired. Accepts the <code>HTMLElement</code> or element <code>id</code> of the desired parent element.</p>
+
+<aside class="warning">
+  Chat will render immediately inside the `parentElement` provided. It means that the conversation would also get initialized. We do not recommend initializing Embed2 with `parentElement` setting automatically on every page, since it could lead to low engagement rates.
+</aside>
 <h4 id='embed2-api-reference-settings-preload'>preload</h4>
 <p><code>preload?: boolean;</code></p>
 
