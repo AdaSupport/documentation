@@ -704,7 +704,7 @@
 
 <p>A full list of <code>adaSettings</code> options can be found in <a href="#embed2-api-reference">API Reference</a>.</p>
 
-<aside class="warning">
+<aside class="notice">
 Embed2 requires `window.adaSettings` be defined before the script loads. You must therefore either define `window.adaSettings` before the Embed script, or make use of async on your embed script (see Async below).
 </aside>
 <h3 id='embed2-advanced-setup-lazy-mode'>Lazy Mode</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script
@@ -943,7 +943,7 @@ Meta field keys should not include whitespace, emojis, special characters or per
 
 <p>Specifies where to mount the <code>&lt;iframe&gt;</code> if the default side drawer is not desired. Accepts the <code>HTMLElement</code> or element <code>id</code> of the desired parent element.</p>
 
-<aside class="warning">
+<aside class="notice">
   Chat will render immediately inside the `parentElement` provided. It means that the conversation would also get initialized. We do not recommend initializing Embed2 with `parentElement` setting automatically on every page, since it could lead to low engagement rates.
 </aside>
 <h4 id='embed2-api-reference-settings-preload'>preload</h4>
