@@ -288,9 +288,6 @@
                                     <a href="#embed2-api-reference-settings-embedstyles" class="toc-h4 toc-link" data-title="embedStyles">embedStyles</a>
                                   </li>
                                   <li>
-                                    <a href="#embed2-api-reference-settings-eventcallbacks" class="toc-h4 toc-link" data-title="eventCallbacks">eventCallbacks</a>
-                                  </li>
-                                  <li>
                                     <a href="#embed2-api-reference-settings-greeting" class="toc-h4 toc-link" data-title="greeting">greeting</a>
                                   </li>
                                   <li>
@@ -420,9 +417,6 @@
                                     <a href="#ios-sdk-api-settings-cluster" class="toc-h4 toc-link" data-title="cluster">cluster</a>
                                   </li>
                                   <li>
-                                    <a href="#ios-sdk-api-settings-eventcallbacks" class="toc-h4 toc-link" data-title="eventCallbacks">eventCallbacks</a>
-                                  </li>
-                                  <li>
                                     <a href="#ios-sdk-api-settings-greeting" class="toc-h4 toc-link" data-title="greeting">greeting</a>
                                   </li>
                                   <li>
@@ -519,9 +513,6 @@
                                     <a href="#android-sdk-api-settings-cluster" class="toc-h4 toc-link" data-title="cluster">cluster</a>
                                   </li>
                                   <li>
-                                    <a href="#android-sdk-api-settings-addeventcallback" class="toc-h4 toc-link" data-title="addEventCallback">addEventCallback</a>
-                                  </li>
-                                  <li>
                                     <a href="#android-sdk-api-settings-greeting" class="toc-h4 toc-link" data-title="greeting">greeting</a>
                                   </li>
                                   <li>
@@ -590,9 +581,6 @@
                               <ul class="toc-list-h4">
                                   <li>
                                     <a href="#react-native-sdk-api-props-cluster" class="toc-h4 toc-link" data-title="cluster">cluster</a>
-                                  </li>
-                                  <li>
-                                    <a href="#react-native-sdk-api-props-eventcallbacks" class="toc-h4 toc-link" data-title="eventCallbacks">eventCallbacks</a>
                                   </li>
                                   <li>
                                     <a href="#react-native-sdk-api-props-greeting" class="toc-h4 toc-link" data-title="greeting">greeting</a>
@@ -882,10 +870,6 @@ The Embed2 entry and client scripts must all use the same version. If you requir
 <aside class="warning">
 Setting custom styles based on Embed2 elements is inherently brittle, and can cause your styles to break over time. We do not recommend use of custom styles unless absolutely necessary. If custom styles are used, you should only rely on direct element IDs.
 </aside>
-<h4 id='embed2-api-reference-settings-eventcallbacks'>eventCallbacks</h4>
-<p><code>eventCallbacks?: { [eventName: string]: (jsEvent: object) =&gt; void };</code></p>
-
-<p>Used in conjunction with the Chat Transfer Block or Event Trigger block, <code>eventCallbacks</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
 <h4 id='embed2-api-reference-settings-greeting'>greeting</h4>
 <p><code>greeting?: string;</code></p>
 
@@ -943,7 +927,7 @@ Meta field keys should not include whitespace, emojis, special characters or per
 
 <p>Specifies where to mount the <code>&lt;iframe&gt;</code> if the default side drawer is not desired. Accepts the <code>HTMLElement</code> or element <code>id</code> of the desired parent element.</p>
 
-<aside class="notice">
+<aside class="warning">
   Chat will render immediately inside the `parentElement` provided. It means that the conversation would also get initialized. We do not recommend initializing Embed2 with `parentElement` setting automatically on every page, since it could lead to low engagement rates.
 </aside>
 <h4 id='embed2-api-reference-settings-preload'>preload</h4>
@@ -1088,7 +1072,7 @@ Meta field keys should not include whitespace, emojis, special characters or per
 
 <ol>
 <li><p>Add the <code>AdaEmbedFramework</code> to your Podfile.</p></li>
-<li><p>Install the pod using: </p></li>
+<li><p>Install the pod using:</p></li>
 </ol>
 
 <p><code>pod install</code></p>
@@ -1117,10 +1101,6 @@ Meta field keys should not include whitespace, emojis, special characters or per
 <p><code>cluster: String = &quot;&quot;</code></p>
 
 <p>Specifies the Kubernetes cluster to be used. Unless directed by an Ada team member, you will not need to change this value.</p>
-<h4 id='ios-sdk-api-settings-eventcallbacks'>eventCallbacks</h4>
-<p><code>eventCallbacks: [String: (_ event: [String: Any]) -&gt; Void]? = nil</code></p>
-
-<p>Used in conjunction with the Chat Transfer Block or Event Trigger block, <code>eventCallbacks</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
 <h4 id='ios-sdk-api-settings-greeting'>greeting</h4>
 <p><code>greeting: String = &quot;&quot;</code></p>
 
@@ -1181,7 +1161,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 <h4 id='ios-sdk-api-actions-reset'>reset</h4>
 <p><code>reset()</code></p>
 
-<p>Can be used to create a new <code>chatter</code> and refresh the Chat window. </p>
+<p>Can be used to create a new <code>chatter</code> and refresh the Chat window.</p>
 <h4 id='ios-sdk-api-actions-setmetafields'>setMetaFields</h4><pre class="highlight swift tab-swift"><code><span class="n">adaFramework</span><span class="o">.</span><span class="nf">setMetaFields</span><span class="p">([</span>
     <span class="s">"firstName"</span><span class="p">:</span> <span class="s">"Jane"</span><span class="p">,</span>
     <span class="s">"lastName"</span><span class="p">:</span> <span class="s">"Doe"</span><span class="p">,</span>
@@ -1206,7 +1186,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 
 <p>After that, synchronize the project.</p>
 
-<p>You can also import a file using Android Studio. To do this, go to <code>File -&gt; New -&gt; New Module</code>. In the window select <code>Import .JAR/.AAR Package</code> and click <code>Next</code>. After that, specify the path to the <code>.aar</code> file and the module name, and click <code>Finish</code>. </p>
+<p>You can also import a file using Android Studio. To do this, go to <code>File -&gt; New -&gt; New Module</code>. In the window select <code>Import .JAR/.AAR Package</code> and click <code>Next</code>. After that, specify the path to the <code>.aar</code> file and the module name, and click <code>Finish</code>.</p>
 <pre class="highlight groovy tab-groovy"><code><span class="c1">// build.gradle</span>
 <span class="n">implementation</span> <span class="nf">project</span><span class="o">(</span><span class="s1">':new_module_name'</span><span class="o">)</span>
 </code></pre>
@@ -1218,7 +1198,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
             <span class="n">url</span> <span class="s2">"https://adasupport.bintray.com/Android-SDK"</span>
         <span class="o">}</span>
     <span class="o">}</span>
-<span class="o">}</span>        
+<span class="o">}</span>
 </code></pre>
 <p>The Ada Android SDK can be installed using Gradle from the Ada Support Bintray repository.</p>
 
@@ -1273,8 +1253,8 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 
 <p>Finally, to display the newly created chat frame on screen, simply add the view to your container.</p>
 <h4 id='android-sdk-quick-start-gradle-dialog'>Dialog</h4><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">dialog</span> <span class="p">=</span> <span class="n">AdaEmbedDialog</span><span class="p">()</span>
- <span class="n">adaDialog</span><span class="p">.</span><span class="n">arguments</span> <span class="p">=</span> <span class="n">Bundle</span><span class="p">().</span><span class="n">apply</span> <span class="p">{</span> 
-    <span class="n">putParcelable</span><span class="p">(</span><span class="n">AdaEmbedDialog</span><span class="p">.</span><span class="n">ARGUMENT_SETTINGS</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span> 
+ <span class="n">adaDialog</span><span class="p">.</span><span class="n">arguments</span> <span class="p">=</span> <span class="n">Bundle</span><span class="p">().</span><span class="n">apply</span> <span class="p">{</span>
+    <span class="n">putParcelable</span><span class="p">(</span><span class="n">AdaEmbedDialog</span><span class="p">.</span><span class="n">ARGUMENT_SETTINGS</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
  <span class="p">}</span>
 </code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="n">dialog</span><span class="p">.</span><span class="n">show</span><span class="p">(</span><span class="n">supportFragmentManager</span><span class="p">,</span> <span class="n">AdaEmbedDialog</span><span class="p">.</span><span class="n">TAG</span><span class="p">)</span>
 </code></pre>
@@ -1318,7 +1298,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
         <span class="na">android:id=</span><span class="s">"@+id/ada_chat_frame"</span>
         <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
         <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
-        <span class="na">app:ada_handle=</span><span class="s">"ada-example"</span> 
+        <span class="na">app:ada_handle=</span><span class="s">"ada-example"</span>
         <span class="na">app:ada_cluster=</span><span class="s">"ca"</span>
         <span class="na">app:ada_language=</span><span class="s">"en"</span>
         <span class="na">app:ada_handle=</span><span class="s">"ada-example"</span>
@@ -1334,27 +1314,6 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 <p>Using the SDK, you can configure the initial chat settings for greater customization. Settings can be configured for XML, or programmatically using the<code>AdaEmbedView.Settings</code> class.</p>
 <h4 id='android-sdk-api-settings-cluster'>cluster</h4>
 <p>Specifies the Kubernetes cluster to be used. Unless directed by an Ada team member, you will not need to change this value.</p>
-<h4 id='android-sdk-api-settings-addeventcallback'>addEventCallback</h4><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">eventCallback</span><span class="p">:</span> <span class="p">(</span><span class="n">event</span><span class="p">:</span> <span class="n">Event</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Unit</span> <span class="p">=</span> <span class="p">{</span>
-    <span class="c1">//some action with event
-</span><span class="p">}</span>
-
-<span class="n">adaView</span><span class="p">.</span><span class="n">addEventCallback</span><span class="p">(</span><span class="s">"event_name"</span><span class="p">,</span> <span class="n">eventCallback</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>Or, you can omit event name to use as a generic event:</p>
-</blockquote>
-<pre class="highlight kotlin tab-kotlin"><code><span class="n">adaView</span><span class="p">.</span><span class="n">addEventCallback</span><span class="p">(</span><span class="n">callback</span> <span class="p">=</span> <span class="n">eventCallback</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>To remove callbacks:</p>
-</blockquote>
-<pre class="highlight kotlin tab-kotlin"><code><span class="n">adaView</span><span class="p">.</span><span class="n">removeEventCallback</span><span class="p">(</span><span class="n">eventCallback</span><span class="p">)</span> <span class="c1">// Remove a specific callback
-// Or...
-</span><span class="n">adaView</span><span class="p">.</span><span class="n">removeEventCallbacks</span><span class="p">(</span><span class="s">"event_name"</span><span class="p">)</span> <span class="c1">// Remove all callback associated with an event name
-// Or...
-</span><span class="n">adaView</span><span class="p">.</span><span class="n">removeEventCallbacks</span><span class="p">()</span> <span class="c1">// Remove all callbacks
-</span></code></pre>
-<p>Used in conjunction with the Chat Transfer Block or Event Trigger block, <code>addEventCallback</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
 <h4 id='android-sdk-api-settings-greeting'>greeting</h4>
 <p>This can be used to customize the greeting messages that new users see. This is useful for setting view-specific greetings across your app. The greeting should correspond to the ID of the Answer you would like to use. The ID can be found in the URL of the corresponding Answer in the dashboard.</p>
 <h4 id='android-sdk-api-settings-handle'>handle</h4>
@@ -1362,7 +1321,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 <h4 id='android-sdk-api-settings-language'>language</h4>
 <p>Takes in a language code to programmatically set the bot language. Languages must first be turned on in the Settings &gt; Multilingual page of your Ada dashboard. Language codes follow the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 language format</a>.</p>
 <h4 id='android-sdk-api-settings-metafields'>metaFields</h4>
-<p>Used to pass meta information about a Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the phone_number and name for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations page of your Ada dashboard. </p>
+<p>Used to pass meta information about a Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the phone_number and name for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations page of your Ada dashboard.</p>
 
 <p>You can also set &quot;meta fields&quot; using XML. For this, you need to create a JSON file in the res/raw directory, and set the reference to the view declaration:</p>
 <h4 id='android-sdk-api-settings-styles'>styles</h4>
@@ -1475,27 +1434,13 @@ yarn add @ada-support/react-native-sdk
   ...
 <span class="nt">&lt;/manifest&gt;</span>
 </code></pre>
-<p>For Android, add permissions in <code>AndroidManifest.xml</code>. </p>
+<p>For Android, add permissions in <code>AndroidManifest.xml</code>.</p>
 <h2 id='react-native-sdk-api'>API</h2><h3 id='react-native-sdk-api-props'>Props</h3>
 <p><code>AdaEmbedView</code> can take various props to customize the behaviour of your Chat bot.</p>
 <h4 id='react-native-sdk-api-props-cluster'>cluster</h4>
 <p><code>cluster?: string;</code></p>
 
 <p>Specifies the Kubernetes cluster to be used. Unless directed by an Ada team member, you will not need to change this value.</p>
-<h4 id='react-native-sdk-api-props-eventcallbacks'>eventCallbacks</h4><pre class="highlight jsx tab-jsx"><code><span class="nx">eventCallbacks</span><span class="o">=</span><span class="p">{{</span>
-  <span class="s2">"*"</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// This function will catch all events</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">event_name</span><span class="p">);</span>
-  <span class="p">},</span>
-  <span class="s2">"my_event_name"</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// This function will catch only events with the specified name (my_event_name)</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">event_name</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}}</span>
-</code></pre>
-<p><code>eventCallbacks?: { [eventName: string]: (jsEvent: object) =&gt; void };</code></p>
-
-<p>Used in conjunction with the Chat Transfer Block or Event Trigger block, <code>eventCallbacks</code> can be used to trigger callbacks based on Chat events. Requires the <code>custom_javascript_event_block</code> feature flag to be turned on.</p>
 <h4 id='react-native-sdk-api-props-greeting'>greeting</h4>
 <p><code>greeting?: string;</code></p>
 
@@ -1541,7 +1486,7 @@ Setting custom styles based on Chat elements is inherently brittle, and can caus
 
 <span class="kr">class</span> <span class="nx">MyComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
   <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">&lt;</span><span class="nc">AdaEmbedView</span> 
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nc">AdaEmbedView</span>
             <span class="na">handle=</span><span class="s2">"ada-example"</span>
             <span class="na">ref=</span><span class="si">{</span><span class="nx">ref</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">adaEmbedView</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">)</span><span class="si">}</span><span class="p">/&gt;;</span>
   <span class="p">}</span>
